@@ -19,7 +19,7 @@
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-    class Christmas2017Theme extends VanillaTheme
+    class Badass2018Theme extends VanillaTheme
     {
         //constructor() {
             //super();
@@ -32,13 +32,13 @@
             for(let i in files)
             {
                 //files[i] = "//localhost/Christmas/" + getFileName(files[i]);
-                files[i] = "//raw.githubusercontent.com/Molesmalo/AirMashChristmasMod/master/assets/" + getFileName(files[i]);
+                files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assets/" + getFileName(files[i]);
             }
         }
     }
 
     // We add some metadata to our theme class
-    $.extend(Christmas2017Theme, {
+    $.extend(Badass2018Theme, {
         themeName: "Badass Planes Theme",
         description: "As the name says!!",
         author: "xplay"
