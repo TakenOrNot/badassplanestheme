@@ -43,7 +43,13 @@
             }
         }
 
-        
+        function customSkin(Bt) {
+            if ("Badass" == Bt.name) {
+                Xt = {
+                    raptor: ["aircraft", [788, 264, 256, 256]]
+                }
+            }
+        }
         
     }
 
