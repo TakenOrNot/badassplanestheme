@@ -27,14 +27,24 @@
         //}
 
         // This method called by StarMash when the game is loading
-        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures) 
+        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
+            const toChange = [
+                "aircraft.png"];
+
             for(let i in files)
             {
-                //files[i] = "//localhost/Christmas/" + getFileName(files[i]);
-                files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assets/" + getFileName(files[i]);
+                let fileName = getFileName(files[i]);
+
+                if ($.inArray(fileName, toChange) > -1)
+                {
+                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assets/" + getFileName(files[i]);
+                }
             }
         }
+
+        
+        
     }
 
     // We add some metadata to our theme class
