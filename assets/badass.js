@@ -30,6 +30,7 @@
         injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
             const toChange = [
+                "items.png",
                 "aircraft.png"];
 
             for(let i in files)
