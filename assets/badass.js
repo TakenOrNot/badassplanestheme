@@ -33,7 +33,8 @@
                 "items.png",
                 "aircraft.png",
                 "map_sea_mask.jpg",
-                "map_sand_mask.jpg"];
+                "map_sand_mask.jpg",
+                "map_rock_mask.jpg"];
 
             for(let i in files)
             {
