@@ -31,7 +31,9 @@
         {
             const toChange = [
                 "items.png",
-                "aircraft.png"];
+                "aircraft.png",
+                "map_sea_mask.jpg",
+                "map_sand_mask.jpg"];
 
             for(let i in files)
             {
