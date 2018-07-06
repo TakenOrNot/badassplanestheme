@@ -31,6 +31,7 @@
         injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
             const toChange = [
+                "gui.png",
                 "items.png",
                 "aircraft.png",
                 "map_sea_mask.jpg",
