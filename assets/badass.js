@@ -34,6 +34,7 @@
                 "gui.png",
                 "items.png",
                 "aircraft.png",
+                "arrow_indicator.png",
                 "map_sea_mask.jpg",
                 "map_sand_mask.jpg",
                 "map_rock_mask.jpg"];
