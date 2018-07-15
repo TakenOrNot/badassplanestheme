@@ -182,7 +182,7 @@
     
     // We add some metadata to our theme class
     $.extend(Badass2018Theme, {
-        themeName: "Badass Planes Theme",
+        themeName: "Badass Planes Theme Dev",
         description: "As the name says!!",
         author: "xplay"
     });
@@ -191,9 +191,9 @@
 
     // Register our extension and theme
     SWAM.registerExtension({
-        name: "Badass Planes Theme Extension",
-        id: "Badass2018",
-        description: "Badass Planes Theme",
+        name: "Badass Planes Theme Extension DEV",
+        id: "Badass2018dev",
+        description: "Badass Planes Theme DEV",
         author: "xplay",
         version: "1.0",
         themes: [ Badass2018Theme ]
