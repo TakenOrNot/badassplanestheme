@@ -168,15 +168,15 @@
         }
     }
 
-  function toggleBlue ( force ) {
-    _toggleElement ( '#flag-border-blue-left', force );
-    _toggleElement ( '#flag-border-blue-right', force );
-  }
+    function toggleBlue ( force ) {
+        _toggleElement ( '#flag-border-blue-left', force );
+        _toggleElement ( '#flag-border-blue-right', force );
+    }
 
-  function toggleRed ( force ) {
-    _toggleElement ( '#flag-border-red-left', force );
-    _toggleElement ( '#flag-border-red-right', force );
-
+    function toggleRed ( force ) {
+        _toggleElement ( '#flag-border-red-left', force );
+        _toggleElement ( '#flag-border-red-right', force );
+    }
     
     // ------------------------------------------------------------------------
     
