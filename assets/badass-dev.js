@@ -23,7 +23,7 @@
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-    class Badass2018Theme extends VanillaTheme
+    class Badass2018ThemeDev extends VanillaTheme
     {
         constructor() {
             super();
@@ -181,7 +181,7 @@
     // ------------------------------------------------------------------------
     
     // We add some metadata to our theme class
-    $.extend(Badass2018Theme, {
+    $.extend(Badass2018ThemeDev, {
         themeName: "Badass Planes Theme Dev",
         description: "As the name says!!",
         author: "xplay"
@@ -196,6 +196,6 @@
         description: "Badass Planes Theme DEV",
         author: "xplay",
         version: "1.0",
-        themes: [ Badass2018Theme ]
+        themes: [ Badass2018ThemeDev ]
     });
 }();
