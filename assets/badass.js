@@ -5,6 +5,26 @@
 
 !function()
 {
+    /* INIT */
+
+    function init () {
+
+        // initHTML ();
+        // initStyle ();
+        initEvents ();
+
+    }
+    
+    function initEvents () {
+
+        SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
+
+    }
+    
+    SWAM.on ( 'gameLoaded', init );
+    
+    // ------------------------------------------------------------------------
+    
     // Returns the filename part of an AirMash's image URL
     function getFileName(str)
     {
@@ -51,7 +71,15 @@
         }
         
     }
+    
+    // ------------------------------------------------------------------------
+    
+    /* EVENTS */
 
+    function onMatchStarted () {
+        toggleRed ( false );
+        toggleBlue ( false );
+    };
     // We add some metadata to our theme class
     $.extend(Badass2018Theme, {
         themeName: "Badass Planes Theme",
