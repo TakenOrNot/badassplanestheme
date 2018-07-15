@@ -4517,7 +4517,19 @@ input:focus {
     box-shadow: inset 10px 10px 20px rgba(255,17,119, .75);
   }
 }
+@-webkit-keyframes neonredright {
+  from {
+    box-shadow: inset -10px 10px 10px rgba(255,17,119, .5);
+  }
+  to {
+    box-shadow: inset -10px 10px 20px rgba(255,17,119, .75);
+  }
+}
+
+
+
 #flag-border-red-left {-webkit-animation: neonredleft .5s ease-in-out infinite alternate;}
+#flag-border-red-right {-webkit-animation: neonredright .5s ease-in-out infinite alternate;}
 #flag-border-blue-left, #flag-border-red-left {
     left: 0;
     border-width: 0 0 0 0px;
