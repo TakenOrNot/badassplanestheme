@@ -4511,34 +4511,34 @@ input:focus {
 
 @-webkit-keyframes neonredleft {
   from {
-    box-shadow: inset 10px 10px 10px rgba(255,17,119, .5);
+    box-shadow: inset 10px 10px 10px rgba(255,17,119, .75);
   }
   to {
-    box-shadow: inset 10px 10px 20px rgba(255,17,119, .75);
+    box-shadow: inset 10px 10px 20px rgba(255,17,119, .25);
   }
 }
 @-webkit-keyframes neonredright {
   from {
-    box-shadow: inset -10px 10px 10px rgba(255,17,119, .5);
+    box-shadow: inset -10px 10px 10px rgba(255,17,119, .75);
   }
   to {
-    box-shadow: inset -10px 10px 20px rgba(255,17,119, .75);
+    box-shadow: inset -10px 10px 20px rgba(255,17,119, .25);
   }
 }
 @-webkit-keyframes neonblueleft {
   from {
-    box-shadow: inset 10px 10px 10px rgba(35, 17, 255, 0.5);
+    box-shadow: inset 10px 10px 10px rgba(0, 245, 245, 0.75);
   }
   to {
-    box-shadow: inset 10px 10px 20px rgba(35, 17, 255, .75);
+    box-shadow: inset 10px 10px 20px rgba(0, 245, 245, .25);
   }
 }
 @-webkit-keyframes neonblueright {
   from {
-    box-shadow: inset -10px 10px 10px rgba(35, 17, 255, .5);
+    box-shadow: inset -10px 10px 10px rgba(0, 245, 245, 0.75);
   }
   to {
-    box-shadow: inset -10px 10px 20px rgba(35, 17, 255, .75);
+    box-shadow: inset -10px 10px 20px rgba(0, 245, 245, .25);
   }
 }
 
