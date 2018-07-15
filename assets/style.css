@@ -4525,11 +4525,29 @@ input:focus {
     box-shadow: inset -10px 10px 20px rgba(255,17,119, .75);
   }
 }
+@-webkit-keyframes neonblueleft {
+  from {
+    box-shadow: inset 10px 10px 10px rgba(35, 17, 255, 0.5);
+  }
+  to {
+    box-shadow: inset 10px 10px 20px rgba(35, 17, 255, .75);
+  }
+}
+@-webkit-keyframes neonblueright {
+  from {
+    box-shadow: inset -10px 10px 10px rgba(35, 17, 255, .5);
+  }
+  to {
+    box-shadow: inset -10px 10px 20px rgba(35, 17, 255, .75);
+  }
+}
 
 
 
 #flag-border-red-left {-webkit-animation: neonredleft .5s ease-in-out infinite alternate;}
 #flag-border-red-right {-webkit-animation: neonredright .5s ease-in-out infinite alternate;}
+#flag-border-blue-left {-webkit-animation: neonredleft .5s ease-in-out infinite alternate;}
+#flag-border-blue-right {-webkit-animation: neonredright .5s ease-in-out infinite alternate;}
 #flag-border-blue-left, #flag-border-red-left {
     left: 0;
     border-width: 0 0 0 0px;
