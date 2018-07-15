@@ -4546,8 +4546,8 @@ input:focus {
 
 #flag-border-red-left {-webkit-animation: neonredleft .5s ease-in-out infinite alternate;}
 #flag-border-red-right {-webkit-animation: neonredright .5s ease-in-out infinite alternate;}
-#flag-border-blue-left {-webkit-animation: neonredleft .5s ease-in-out infinite alternate;}
-#flag-border-blue-right {-webkit-animation: neonredright .5s ease-in-out infinite alternate;}
+#flag-border-blue-left {-webkit-animation: neonblueleft .5s ease-in-out infinite alternate;}
+#flag-border-blue-right {-webkit-animation: neonblueright .5s ease-in-out infinite alternate;}
 #flag-border-blue-left, #flag-border-red-left {
     left: 0;
     border-width: 0 0 0 0px;
