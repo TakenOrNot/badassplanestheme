@@ -4519,10 +4519,12 @@ input:focus {
 }
 @-webkit-keyframes neonredright {
   from {
-    box-shadow: inset -10px 10px 10px rgba(255,17,119, .75);
+
+    background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 1%; 
   }
   to {
-    box-shadow: inset -10px 10px 20px rgba(255,17,119, .25);
+    
+    background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 60%, rgba(255,17,119,0) 80%, rgba(255,17,119,0) 100%); height : 1%; 
   }
 }
 @-webkit-keyframes neonblueleft {
