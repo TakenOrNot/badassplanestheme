@@ -4545,8 +4545,8 @@ input:focus {
 
 
 #flag-border-red-left {}
-#flag-border-red-right.active {-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 5; box-shadow: inset 10px 10px 10px rgba(255,17,119, .75);}
-#flag-border-blue-left.active {-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 5; box-shadow: inset -10px 10px 10px rgba(0, 245, 245, 0.75);}
+#flag-border-red-right.active {-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 5; box-shadow: inset -10px 10px 10px rgba(255,17,119, .75);}
+#flag-border-blue-left.active {-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 5; box-shadow: inset 10px 10px 10px rgba(0, 245, 245, 0.75);}
 #flag-border-blue-right {}
 #flag-border-blue-left, #flag-border-red-left {
     left: 0;
