@@ -163,8 +163,10 @@
         }
         if ( force ) {
             UI.show ( selector );
+            $( selector ).addClass("active");
         } else {
             UI.hide ( selector );
+             $( selector ).removeClass("active");
         }
     }
 
