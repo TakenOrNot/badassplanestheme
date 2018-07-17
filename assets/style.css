@@ -4545,8 +4545,8 @@ input:focus {
 
 
 #flag-border-red-left {}
-#flag-border-red-right {-webkit-animation: neonredright .5s ease-in-out infinite alternate;}
-#flag-border-blue-left {-webkit-animation: neonblueleft .5s ease-in-out infinite alternate;}
+#flag-border-red-right.active {-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 5;}
+#flag-border-blue-left.active {-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 5;}
 #flag-border-blue-right {}
 #flag-border-blue-left, #flag-border-red-left {
     left: 0;
