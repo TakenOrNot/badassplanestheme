@@ -36,7 +36,7 @@
         {
             const toChange = [
                 "gui.png",
-                "items.png",
+                "items_dev.png",
                 "aircraft.png",
                 "arrow_indicator.png",
                 "map_sea_mask.jpg",
