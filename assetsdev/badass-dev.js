@@ -49,7 +49,7 @@
 
                 if ($.inArray(fileName, toChange) > -1)
                 {
-                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assets/" + getFileName(files[i]);
+                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + getFileName(files[i]);
                 }
             }
         }
