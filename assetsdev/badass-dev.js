@@ -27,7 +27,7 @@
     {
         constructor() {
             super();
-            SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assets/style.css");
+            SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
             //my initialization code goes here, after calling super()
         }
 
