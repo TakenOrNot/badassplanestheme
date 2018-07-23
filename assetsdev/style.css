@@ -4558,4 +4558,4 @@ input:focus {
     left: 0;
     border-width: 0 0 0 0px;
 }
-#LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/items.png');}
+#LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 50% no-repeat;}
