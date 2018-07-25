@@ -90,7 +90,7 @@
 
         const style = `
           <style>
-            #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png');}
+            #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
             #flag-border-blue-left, #flag-border-red-left, #flag-border-blue-right, #flag-border-red-right {
               pointer-events: none;
               position: fixed;
@@ -123,7 +123,8 @@
           </style>
         `;
 
-        $('head').append ( style );
+        // $('head').append ( style );
+        $('body').append ( style );
 
     }
     
