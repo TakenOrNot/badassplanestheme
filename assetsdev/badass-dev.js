@@ -129,10 +129,10 @@
         }
         
     };
-    function onGameWipe () {
-        toggleRed ( false );
-        toggleBlue ( false );
-    };
+    // function onGameWipe () {
+    //    toggleRed ( false );
+    //    toggleBlue ( false );
+    // };
      
     // ------------------------------------------------------------------------
     
