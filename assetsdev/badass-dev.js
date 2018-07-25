@@ -132,10 +132,10 @@
         // toggleBlue ( false );
         var blueflagcheck = $( "#blueflag-name" ).justtext(); 
         var redflagcheck = $( "#redflag-name" ).justtext();
-        if ( blueflagcheck != ""){
+        if ( blueflagcheck.lenght > 0){
             console.log("flag already out " + blueflagcheck);
         };
-        if ( redflagcheck !== ""){
+        if ( redflagcheck.lenght > 0){
             console.log("flag already out " + redflagcheck);
         }
         
