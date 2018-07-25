@@ -100,7 +100,7 @@
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
         SWAM.on ( 'CTF_MatchStarted', onMatchEnded );
         SWAM.on ( 'gamePrep', onGamePrep );
-        SWAM.on ( 'gameWipe', onGameWipe );
+        // SWAM.on ( 'gameWipe', onGameWipe );
 
     }
     
