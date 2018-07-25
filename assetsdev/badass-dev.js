@@ -98,6 +98,9 @@
         // SWAM.on ( 'CTF_FlagEvent', onFlagEvent );
 
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
+        SWAM.on ( 'CTF_MatchStarted', onMatchEnded );
+        SWAM.on ( 'gamePrep', onGamePrep );
+        SWAM.on ( 'gameWipe', onGameWipe );
 
     }
     
@@ -111,7 +114,27 @@
         toggleRed ( false );
         toggleBlue ( false );
     };
-    
+    function onMatchEnded () {
+        toggleRed ( false );
+        toggleBlue ( false );
+    };
+    function onGamePrep () {
+        // toggleRed ( false );
+        // toggleBlue ( false );
+        if ($( "#blueflag-name" ).lenght() !== 0){
+            console.log("flag already out");
+        };
+        else if ($( "#redflag-name" ).lenght() !== 0){
+            console.log("flag already out");
+        }
+        else {
+            console.log("flag not carried atm");
+        };
+    };
+    function onGameWipe () {
+        toggleRed ( false );
+        toggleBlue ( false );
+    };
      
     // ------------------------------------------------------------------------
     
