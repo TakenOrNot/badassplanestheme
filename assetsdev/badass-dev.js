@@ -98,7 +98,7 @@
         // SWAM.on ( 'CTF_FlagEvent', onFlagEvent );
 
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
-        SWAM.on ( 'CTF_MatchStarted', onMatchEnded );
+        SWAM.on ( 'CTF_MatchEnded', onMatchEnded );
         SWAM.on ( 'gamePrep', onGamePrep );
         // SWAM.on ( 'gameWipe', onGameWipe );
 
@@ -121,10 +121,12 @@
     function onGamePrep () {
         // toggleRed ( false );
         // toggleBlue ( false );
-        if ($( "#blueflag-name" ).lenght() !== 0){
+        blueflag = $( "#blueflag-name" ).lenght(); 
+        redflag = $( "#redflag-name" ).lenght();
+        if ( blueflag !== 0){
             console.log("flag already out");
         };
-        if ($( "#redflag-name" ).lenght() !== 0){
+        if ( redflag !== 0){
             console.log("flag already out");
         }
         
