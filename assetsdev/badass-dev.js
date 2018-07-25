@@ -121,8 +121,8 @@
     function onGamePrep () {
         // toggleRed ( false );
         // toggleBlue ( false );
-        blueflag = $( "#blueflag-name" ).lenght(); 
-        redflag = $( "#redflag-name" ).lenght();
+        blueflag = $( "#blueflag-name" ).text(); 
+        redflag = $( "#redflag-name" ).text();
         if ( blueflag !== 0){
             console.log("flag already out");
         };
