@@ -90,6 +90,7 @@
 
         const style = `
           <style>
+            #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png');}
             #flag-border-blue-left, #flag-border-red-left, #flag-border-blue-right, #flag-border-red-right {
               pointer-events: none;
               position: fixed;
