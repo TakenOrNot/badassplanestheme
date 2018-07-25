@@ -124,10 +124,10 @@
         if ($( "#blueflag-name" ).lenght() !== 0){
             console.log("flag already out");
         };
-        else if ($( "#redflag-name" ).lenght() !== 0){
+        if ($( "#redflag-name" ).lenght() !== 0){
             console.log("flag already out");
         }
-        else {
+        if ($( "#redflag-name" ).lenght() !== 0) && ($( "#blueflag-name" ).lenght() !== 0){
             console.log("flag not carried atm");
         };
     };
