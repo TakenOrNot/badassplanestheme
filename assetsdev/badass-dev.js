@@ -92,7 +92,6 @@
             #flag-border-blue-right {}
             #flag-border-red-left {}
             #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
-                left: 0;
                 border-width: 0 0 0 0px;
             }
           </style>
