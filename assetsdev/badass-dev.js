@@ -18,6 +18,16 @@
         return str;
     }
 
+    jQuery.fn.justtext = function() {
+  
+        return $(this)	.clone()
+                .children()
+                .remove()
+                .end()
+                .text();
+
+    };
+    
     // ------------------------------------------------------------------------
 
     // Theme Function
@@ -121,13 +131,13 @@
     function onGamePrep () {
         // toggleRed ( false );
         // toggleBlue ( false );
-        var blueflagcheck = $( "#blueflag-name" ).text(); 
-        var redflagcheck = $( "#redflag-name" ).text();
+        var blueflagcheck = $( "#blueflag-name" ).justtext(); 
+        var redflagcheck = $( "#redflag-name" ).justtext();
         if ( blueflagcheck !== 0){
-            console.log("flag already out");
+            console.log("flag already out " + blueflagcheck);
         };
         if ( redflagcheck !== 0){
-            console.log("flag already out");
+            console.log("flag already out " + redflagcheck);
         }
         
     };
