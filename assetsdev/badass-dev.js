@@ -81,7 +81,7 @@
             #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
             #flag-border-blue-right {}
             #flag-border-red-left {}
-            #flag-border-blue-left, #flag-border-red-left {
+            #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
                 left: 0;
                 border-width: 0 0 0 0px;
             }
