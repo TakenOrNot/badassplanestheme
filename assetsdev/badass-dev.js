@@ -64,62 +64,23 @@
 
     function init () {
 
-        initHTML ();
+        // initHTML ();
         initStyle ();
         initEvents ();
 
     }
     
-    function initHTML () {
-
-        const html = `
-          <div id="flag-border-blue-left"></div>
-          <div id="flag-border-blue-right"></div>
-          <div id="flag-border-red-left"></div>
-          <div id="flag-border-red-right"></div>
-        `;
-
-        $('body').append ( html );
-
-        toggleRed ( false );
-        toggleBlue ( false );
-
-    }
+    
     
     function initStyle () {
 
         const style = `
           <style>
             #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
-            #flag-border-blue-left, #flag-border-red-left, #flag-border-blue-right, #flag-border-red-right {
-              pointer-events: none;
-              position: fixed;
-              top: 0;
-              bottom: 0;
-              width: 50vw;
-              box-sizing: border-box;
-              opacity: .75;
-            }
-            #flag-border-blue-left, #flag-border-red-left {
-              left: 0;
-              
-            }
-            #flag-border-blue-right, #flag-border-red-right {
-              right: 0;
-              
-            }
-            #flag-border-blue-left, #flag-border-blue-right {
-              
-            }
-            #flag-border-blue-left {
-              z-index: 1;
-            }
-            #flag-border-red-left, #flag-border-red-right {
-              
-            }
-            #flag-border-red-right {
-              z-index: 1;
-            }
+            #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
+            #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
+            #flag-border-blue-right {}
+            #flag-border-red-left {}
           </style>
         `;
 
@@ -130,7 +91,7 @@
     
     function initEvents () {
         
-        SWAM.on ( 'CTF_FlagEvent', onFlagEvent );
+        // SWAM.on ( 'CTF_FlagEvent', onFlagEvent );
 
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
 
@@ -140,48 +101,14 @@
     
     /* EVENTS */
     
-    function onFlagEvent ( event, team, verb ) {
-
-        const taken = ( verb === 'taken' );
-
-        if ( team === 1 ) {
-            toggleBlue ( taken );
-        } else if ( team === 2 ) {
-            toggleRed ( taken );
-        }
-
-    }
+    
     
     function onMatchStarted () {
         toggleRed ( false );
         toggleBlue ( false );
     };
     
-     /* API */
-
-    function _toggleElement ( selector, force ) {
-        if ( force === undefined ) {
-            force = !$(selector).is ( ':visible' );
-        }
-        if ( force ) {
-            UI.show ( selector );
-            $( selector ).addClass("active");
-        } else {
-            UI.hide ( selector );
-             $( selector ).removeClass("active");
-        }
-    }
-
-    function toggleBlue ( force ) {
-        _toggleElement ( '#flag-border-blue-left', force );
-        _toggleElement ( '#flag-border-blue-right', force );
-    }
-
-    function toggleRed ( force ) {
-        _toggleElement ( '#flag-border-red-left', force );
-        _toggleElement ( '#flag-border-red-right', force );
-    }
-    
+     
     // ------------------------------------------------------------------------
     
     // We add some metadata to our theme class
