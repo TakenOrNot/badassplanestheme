@@ -4541,9 +4541,9 @@ input:focus {
 #LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 25% no-repeat;}
 
 #redditPanel {
-    animation: smoothload 7s ease-in forwards;
+    animation: smoothload 5s ease-in forwards;
 }
-#changelogPanel{animation: smoothload 7s ease-in forwards;}
-#logon{animation: smoothload 7s ease-in forwards;}
+#changelogPanel{animation: smoothload 5s ease-in forwards;}
+#logon{animation: smoothload 5s ease-in forwards;}
 
-canvas {animation: smoothload 20s ease-in-out;}
+canvas {animation: smoothload 20s ease-in;}
