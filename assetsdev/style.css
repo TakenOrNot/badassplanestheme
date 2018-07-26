@@ -4543,7 +4543,7 @@ input:focus {
 #redditPanel {
     animation: smoothload 15s ease-in-out;
 }
-#changelogPanel{}
-#logon{}
+#changelogPanel{animation: smoothload 15s ease-in-out;}
+#logon{animation: smoothload 15s ease-in-out;}
 
-body > canvas {}
+body > canvas {animation: smoothload 15s ease-in-out;}
