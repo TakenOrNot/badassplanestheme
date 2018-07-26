@@ -4546,4 +4546,4 @@ input:focus {
 #changelogPanel{animation: smoothload 10s ease-in forwards;}
 #logon{animation: smoothload 10s ease-in forwards;}
 
-body > * > canvas {animation: smoothload 15s ease-in-out forwards;}
+body > * > canvas {animation: smoothload 20s ease-in-out;}
