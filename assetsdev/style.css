@@ -4545,7 +4545,7 @@ input:focus {
     100% { opacity:1.0; }
 }
 
-#LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 25% no-repeat;}
+#LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
 #login-ui {z-index: 999;}
 #redditPanel {
     animation: smoothload 8s ease-in forwards;
