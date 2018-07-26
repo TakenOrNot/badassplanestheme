@@ -4509,14 +4509,7 @@ input:focus {
     }
 }
 
-@-webkit-keyframes neonredleft {
-  from {
-    box-shadow: inset 10px 10px 10px rgba(255,17,119, .75);
-  }
-  to {
-    box-shadow: inset 10px 10px 20px rgba(255,17,119, .25);
-  }
-}
+
 @-webkit-keyframes neonredright {
   from {
 
@@ -4539,17 +4532,11 @@ input:focus {
     height : 4%;  
   }
 }
-@-webkit-keyframes neonblueright {
-  from {
-    box-shadow: inset -10px 10px 10px rgba(0, 245, 245, 0.75);
-  }
-  to {
-    box-shadow: inset -10px 10px 20px rgba(0, 245, 245, .25);
-  }
-}
-
-
 
 
 #LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 25% no-repeat;}
 
+#changelogPanel{}
+#logon{}
+#redditPanel{transition: opacity 5s;}
+body > canvas {}
