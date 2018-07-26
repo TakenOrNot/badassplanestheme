@@ -4537,7 +4537,10 @@ input:focus {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
+@keyframes smoothloadcanvas {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 #LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 25% no-repeat;}
 
 #redditPanel {
@@ -4553,3 +4556,7 @@ input:focus {
     animation-iteration-count: 1;
 }
 
+canvas {
+    animation: smoothloadcanvas 20s ease-in;
+    animation-iteration-count: 1;
+}
