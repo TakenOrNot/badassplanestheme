@@ -4548,23 +4548,23 @@ input:focus {
 #LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 25% no-repeat;}
 #login-ui {z-index: 999;}
 #redditPanel {
-    animation: smoothload 10s ease-in forwards;
+    animation: smoothload 9s ease-in forwards;
     animation-iteration-count: 1;
     z-index: 999;
 }
 #changelogPanel{
-    animation: smoothload 10s ease-in forwards;
+    animation: smoothload 9s ease-in forwards;
     animation-iteration-count: 1;
     z-index: 999;
 }
 #logon{
-    animation: smoothload 10s ease-in forwards;
+    animation: smoothload 8s ease-in forwards;
     animation-iteration-count: 1;
     z-index: 999;
 }
 
 canvas {
-    animation: smoothloadcanvas 7s ease-in;
+    animation: smoothloadcanvas 6s ease-in;
     animation-iteration-count: 1;
     z-index: 1;
 }
