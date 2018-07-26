@@ -97,6 +97,7 @@
           </style>
         `;
         $('#redditPanel').css('opacity', '1');
+        $('#redditPanel').addClass('smoothload');
         // $('head').append ( style );
         $('body').append ( style );
 

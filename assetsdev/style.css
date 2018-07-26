@@ -4536,6 +4536,7 @@ input:focus {
 
 #LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 25% no-repeat;}
 
+.smoothload {opacity:1;}
 #changelogPanel{}
 #logon{}
 #redditPanel{
