@@ -4542,8 +4542,18 @@ input:focus {
 
 #redditPanel {
     animation: smoothload 5s ease-in forwards;
+    animation-iteration-count: 1;
 }
-#changelogPanel{animation: smoothload 5s ease-in forwards;}
-#logon{animation: smoothload 5s ease-in forwards;}
+#changelogPanel{
+    animation: smoothload 5s ease-in forwards;
+    animation-iteration-count: 1;
+}
+#logon{
+    animation: smoothload 5s ease-in forwards;
+    animation-iteration-count: 1;
+}
 
-canvas {animation: smoothload 20s ease-in;}
+canvas {
+    animation: smoothload 20s ease-in;
+    animation-iteration-count: 1;
+}
