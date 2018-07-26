@@ -4535,12 +4535,14 @@ input:focus {
 
 
 #LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 25% no-repeat;}
-
-.smoothload {opacity:1;}
-#changelogPanel{}
-#logon{}
 #redditPanel{
     opacity : 0;
+}
+.smoothload > * > #redditPanel {
+    opacity : 1;
     transition: opacity 15s;
 }
+#changelogPanel{}
+#logon{}
+
 body > canvas {}

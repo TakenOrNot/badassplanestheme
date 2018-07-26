@@ -96,8 +96,8 @@
             }
           </style>
         `;
-        $('#redditPanel').css('opacity', '1');
-        $('#redditPanel').addClass('smoothload');
+        //$('#redditPanel').css('opacity', '1');
+        $('body').addClass('smoothload');
         // $('head').append ( style );
         $('body').append ( style );
 
