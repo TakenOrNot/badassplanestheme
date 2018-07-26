@@ -4553,7 +4553,3 @@ input:focus {
     animation-iteration-count: 1;
 }
 
-canvas {
-    animation: smoothload 20s ease-in;
-    animation-iteration-count: 1;
-}
