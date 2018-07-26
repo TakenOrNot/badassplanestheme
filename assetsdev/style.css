@@ -4537,10 +4537,13 @@ input:focus {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 @keyframes smoothloadcanvas {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    0%   { opacity:0.0; }
+    80%  { opacity:0.0; }
+    100% { opacity:1.0; }
 }
+
 #LoadingMainScreen {background: url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 25% no-repeat;}
 #login-ui {z-index: 999;}
 #redditPanel {
