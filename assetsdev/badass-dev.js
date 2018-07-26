@@ -96,7 +96,7 @@
             }
           </style>
         `;
-
+        $('#redditPanel').css('opacity', '1');
         // $('head').append ( style );
         $('body').append ( style );
 
