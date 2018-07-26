@@ -4538,5 +4538,8 @@ input:focus {
 
 #changelogPanel{}
 #logon{}
-#redditPanel{transition: opacity 5s;}
+#redditPanel{
+    opacity : 0;
+    transition: opacity 15s;
+}
 body > canvas {}
