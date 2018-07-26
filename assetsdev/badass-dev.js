@@ -147,6 +147,30 @@
     //    toggleBlue ( false );
     // };
      
+    /* API */
+
+  function _toggleElement ( selector, force ) {
+    if ( force === undefined ) {
+      force = !$(selector).is ( ':visible' );
+    }
+    if ( force ) {
+      UI.show ( selector );
+    } else {
+      UI.hide ( selector );
+    }
+  }
+
+  function toggleBlue ( force ) {
+    _toggleElement ( '#flag-border-blue-left', force );
+    _toggleElement ( '#flag-border-blue-right', force );
+  }
+
+  function toggleRed ( force ) {
+    _toggleElement ( '#flag-border-red-left', force );
+    _toggleElement ( '#flag-border-red-right', force );
+  }
+    
+    
     // ------------------------------------------------------------------------
     
     // We add some metadata to our theme class
