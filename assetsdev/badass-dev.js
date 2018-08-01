@@ -78,13 +78,13 @@
         initStyle ();
         initEvents ();
         window.bdosf = config.scalingFactor;
-        SWAM.ZoomTo(2500);
+        
     }
     
     
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
-
+        SWAM.ZoomTo(2500);
         const style = `
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
