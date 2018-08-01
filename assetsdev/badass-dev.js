@@ -77,11 +77,12 @@
         // initHTML ();
         initStyle ();
         initEvents ();
-
+        window.bdosf = config.scalingFactor;
+        SWAM.ZoomTo(2500);
     }
     
     
-    
+    //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
 
         const style = `
@@ -132,6 +133,7 @@
     function onGamePrep () {
         // toggleRed ( false );
         // toggleBlue ( false );
+        SWAM.ZoomTo(bdosf);
         var blueflagcheck = $( "#blueflag-name" ).justtext(); 
         var redflagcheck = $( "#redflag-name" ).justtext();
         if ( blueflagcheck.lenght > 0){
