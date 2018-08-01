@@ -77,8 +77,8 @@
         // initHTML ();
         initStyle ();
         initEvents ();
-        window.bdosf = config.scalingFactor;
-        console.log("bdosf = " + bdosf)
+        // window.bdosf = config.scalingFactor;
+        // console.log("bdosf = " + bdosf)
         
     }
     
@@ -86,7 +86,7 @@
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
         // SWAM.ZoomTo(2500);
-        config.scalingFactor = 2500;
+        // config.scalingFactor = 2500;
         const style = `
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
@@ -135,7 +135,7 @@
     function onGamePrep () {
         // toggleRed ( false );
         // toggleBlue ( false );
-        SWAM.ZoomTo(bdosf);
+        // SWAM.ZoomTo(bdosf);
         var blueflagcheck = $( "#blueflag-name" ).justtext(); 
         var redflagcheck = $( "#redflag-name" ).justtext();
         if ( blueflagcheck.lenght > 0){
