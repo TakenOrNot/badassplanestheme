@@ -78,7 +78,7 @@
         initStyle ();
         initEvents ();
         window.bdosf = config.scalingFactor;
-        console.log("bdosf = " bdosf)
+        console.log("bdosf = " + bdosf)
         
     }
     
