@@ -33,7 +33,7 @@
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-    class Badass2018ThemeDev extends VanillaTheme
+    class Badass2018ThemeNukem extends VanillaTheme
     {
         constructor() {
             super();
@@ -178,8 +178,8 @@
     // ------------------------------------------------------------------------
     
     // We add some metadata to our theme class
-    $.extend(Badass2018ThemeDev, {
-        themeName: "Badass Planes Theme Dev",
+    $.extend(Badass2018ThemeNukem, {
+        themeName: "Badass Planes Theme NUKEM Edition",
         description: "Experimental",
         author: "xplay"
     });
@@ -188,11 +188,11 @@
 
     // Register our extension and theme
     SWAM.registerExtension({
-        name: "Badass Planes Theme Extension DEV",
+        name: "Badass Planes Theme Extension NUKEM Edition",
         id: "Badass2018dev",
         description: "Experimental",
         author: "xplay",
         version: "1.0",
-        themes: [ Badass2018ThemeDev ]
+        themes: [ Badass2018ThemeNukem ]
     });
 }();
