@@ -189,7 +189,7 @@
     // Register our extension and theme
     SWAM.registerExtension({
         name: "Badass Planes Theme Extension NUKEM Edition",
-        id: "Badass2018dev",
+        id: "Badass2018Nukem",
         description: "Experimental",
         author: "xplay",
         version: "1.0",
