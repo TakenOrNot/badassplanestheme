@@ -31,7 +31,7 @@
             
         };
 
-        let sp = new SettingsProvider(defaultValues, onApply);
+        let sp = new SettingsProvider(settings, onApply);
     
         let section = sp.addSection("First Section");
         
