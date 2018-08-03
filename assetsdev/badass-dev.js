@@ -26,7 +26,7 @@
     
         let section = sp.addSection("First Section");
         
-        section1.addValuesField("values1", "Flavor",
+        section.addValuesField("values1", "Flavor",
         {
             "default": "Default",
             "nuklear": "Nuklear"
