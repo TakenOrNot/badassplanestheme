@@ -16,7 +16,7 @@
             console.log ("New settings applied: ", values);
             
             window.flavor = settings.values1;
-            console.log(flavor);
+            console.log(settings.values1);
 
             if (flavor == 'default') {
 
