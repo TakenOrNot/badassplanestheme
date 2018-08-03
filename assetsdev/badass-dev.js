@@ -65,7 +65,7 @@
     
     if (settings.values1 == 'default') {
         
-        console.log{"SETTTTTTINGS"}
+        console.log("SETTTTTTINGS")
         
     }
             
