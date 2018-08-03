@@ -63,6 +63,8 @@
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
     
+    console.log(settings.values1);
+    
     if (settings.values1 == 'default') {
         
         console.log("SETTTTTTINGS")
