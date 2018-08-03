@@ -46,11 +46,11 @@
     }
     
     
-    function getFlavor()
-    {
-        flavor = settings.values1;
-        return flavor;
-    }
+    //function getFlavor()
+    //{
+    //    flavor = settings.values1;
+    //    return flavor;
+    //}
     
     // ------------------------------------------------------------------------
     
@@ -107,7 +107,7 @@
 
                 if ($.inArray(fileName, toChange) > -1)
                 {
-                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + getFlavor() + "/" + getFileName(files[i]);
+                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + settings.values1 + "/" + getFileName(files[i]);
                 }
             }
         }
