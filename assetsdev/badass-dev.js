@@ -16,6 +16,13 @@
             console.log ("New settings applied: ", values);
             
             window.flavor = settings.values1;
+            console.log(flavor);
+
+            if (flavor == 'default') {
+
+                console.log("SETTTTTTINGS")
+
+            }
         }
 
         // Default values for the settings
@@ -113,14 +120,14 @@
         initEvents ();
         // window.bdosf = config.scalingFactor;
         // console.log("bdosf = " + bdosf)
-        window.flavor = settings.values1;
-        console.log(flavor);
+        // window.flavor = settings.values1;
+        // console.log(flavor);
     
-        if (flavor == 'default') {
+        //if (flavor == 'default') {
 
-            console.log("SETTTTTTINGS")
+        //    console.log("SETTTTTTINGS")
 
-        }
+        //}
         
     }
     
