@@ -117,8 +117,8 @@
         
     }
 
-    let map = game.graphics.layers.map; // land layers container
-    map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
+    //let map = game.graphics.layers.map; // land layers container
+    //map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
     // ------------------------------------------------------------------------
     
     // embed fork of Moz's Flag Borders 
