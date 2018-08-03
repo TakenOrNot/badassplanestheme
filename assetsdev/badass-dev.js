@@ -26,7 +26,7 @@
         }
 
         // Default values for the settings
-        let defaultValues = {
+        let settings = {
             values1: "default",
             
         };
