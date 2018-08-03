@@ -220,7 +220,8 @@
         id: "Badass2018dev",
         description: "Experimental",
         author: "xplay",
-        version: "1.0",
+        version: "1.0.1",
+        settingsProvider: createSettingsProvider(),
         themes: [ Badass2018ThemeDev ]
     });
 }();
