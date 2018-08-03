@@ -84,7 +84,7 @@
         }
 
         // This method called by StarMash when the game is loading
-        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
+        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures, flavor)
         {
             const toChange = [
                 "gui.png",
