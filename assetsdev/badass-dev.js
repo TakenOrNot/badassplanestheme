@@ -15,14 +15,14 @@
         {
             console.log ("New settings applied: ", values);
             settings = values;
-            window.flavor = settings.values1;
+            // window.flavor = settings.values1;
             console.log(settings.values1);
 
-            if (flavor == 'default') {
+            // if (flavor == 'default') {
 
-                console.log("SETTTTTTINGS")
+            //    console.log("SETTTTTTINGS")
 
-            }
+            // }
         }
 
         // Default values for the settings
@@ -43,6 +43,13 @@
         
         // we return our SettingsProvider instance
         return sp;
+    }
+    
+    
+    function getFlavor()
+    {
+        flavor = settings.values1;
+        return flavor;
     }
     
     // ------------------------------------------------------------------------
@@ -84,7 +91,7 @@
         }
 
         // This method called by StarMash when the game is loading
-        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures, flavor)
+        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
             const toChange = [
                 "gui.png",
@@ -100,7 +107,7 @@
 
                 if ($.inArray(fileName, toChange) > -1)
                 {
-                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + flavor + "/" + getFileName(files[i]);
+                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + getFlavor() + "/" + getFileName(files[i]);
                 }
             }
         }
