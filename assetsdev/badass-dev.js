@@ -6,35 +6,7 @@
 !function()
 {
     
-    // Settings
     
-    function createSettingsProvider()
-    {
-        // This is the handler that will be executed when new settings are applied
-        function onApply(values)
-        {
-            console.log ("New settings applied: ", values);
-        }
-
-        // Default values for the settings
-        let defaultValues = {
-            values1: "default",
-            
-        };
-
-        let sp = new SettingsProvider(defaultValues, onApply);
-    
-        let section = sp.addSection("First Section");
-        
-        section.addValuesField("values1", "Flavor",
-        {
-            "default": "Default",
-            "nuklear": "Nuklear"
-        });
-        
-        // we return our SettingsProvider instance
-        return sp;
-    }
     
     // ------------------------------------------------------------------------
     
@@ -64,6 +36,38 @@
     // when this theme is instantiated.
     class Badass2018ThemeDev extends VanillaTheme
     {
+        
+            // Settings
+
+        function createSettingsProvider()
+        {
+            // This is the handler that will be executed when new settings are applied
+            function onApply(values)
+            {
+                console.log ("New settings applied: ", values);
+            }
+
+            // Default values for the settings
+            let defaultValues = {
+                values1: "default",
+
+            };
+
+            let sp = new SettingsProvider(defaultValues, onApply);
+
+            let section = sp.addSection("First Section");
+
+            section.addValuesField("values1", "Flavor",
+            {
+                "default": "Default",
+                "nuklear": "Nuklear"
+            });
+
+            // we return our SettingsProvider instance
+            return sp;
+        }
+        
+        
         constructor() {
             super();
             SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
