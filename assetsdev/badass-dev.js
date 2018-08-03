@@ -17,7 +17,7 @@
             settings = values;
             // window.flavor = settings.values1;
             console.log(settings.values1);
-
+            paf = settings.values1;
             // if (flavor == 'default') {
 
             //    console.log("SETTTTTTINGS")
@@ -42,7 +42,7 @@
         });
         
         
-        var paf = 'test/path';
+        
         // we return our SettingsProvider instance
         return sp;
     }
