@@ -5,7 +5,7 @@
 
 !function()
 {
-    
+    var paf = '';
     // Settings
     
     function createSettingsProvider()
@@ -91,7 +91,7 @@
             SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
             //my initialization code goes here, after calling super()
         }
-        console.log(paf);
+        
         // This method called by StarMash when the game is loading
         injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
@@ -110,6 +110,7 @@
                 if ($.inArray(fileName, toChange) > -1)
                 {
                     files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + settings.values1 + "/" + getFileName(files[i]);
+                    console.log(paf);
                 }
             }
         }
