@@ -6,6 +6,35 @@
 !function()
 {
     
+    // Settings
+    
+    function createSettingsProvider()
+    {
+        // This is the handler that will be executed when new settings are applied
+        function onApply(values)
+        {
+            console.log ("New settings applied: ", values);
+        }
+
+        // Default values for the settings
+        let defaultValues = {
+            values1: "default",
+            
+        };
+
+        let sp = new SettingsProvider(defaultValues, onApply);
+    
+        let section = sp.addSection("First Section");
+        
+        section1.addValuesField("values1", "Flavor",
+        {
+            "default": "Default",
+            "nuklear": "Nuklear"
+        });
+        
+        // we return our SettingsProvider instance
+        return sp;
+    }
     
     // ------------------------------------------------------------------------
     
