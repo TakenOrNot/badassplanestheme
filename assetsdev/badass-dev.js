@@ -41,6 +41,8 @@
             "nuklear": "Nuklear"
         });
         
+        
+        var paf = 'test/path';
         // we return our SettingsProvider instance
         return sp;
     }
@@ -89,7 +91,7 @@
             SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
             //my initialization code goes here, after calling super()
         }
-
+        console.log(paf);
         // This method called by StarMash when the game is loading
         injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
