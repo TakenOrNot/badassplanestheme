@@ -65,13 +65,7 @@
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
     
-    console.log(flavor);
     
-    if (flavor == 'default') {
-        
-        console.log("SETTTTTTINGS")
-        
-    }
             
     
     class Badass2018ThemeDev extends VanillaTheme
@@ -119,6 +113,14 @@
         initEvents ();
         // window.bdosf = config.scalingFactor;
         // console.log("bdosf = " + bdosf)
+        window.flavor = settings.values1;
+        console.log(flavor);
+    
+        if (flavor == 'default') {
+
+            console.log("SETTTTTTINGS")
+
+        }
         
     }
     
