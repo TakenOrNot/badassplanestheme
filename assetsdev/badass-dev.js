@@ -14,7 +14,7 @@
         function onApply(values)
         {
             console.log ("New settings applied: ", values);
-            
+            settings = values;
             window.flavor = settings.values1;
             console.log(settings.values1);
 
