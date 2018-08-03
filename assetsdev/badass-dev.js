@@ -15,39 +15,7 @@
         {
             console.log ("New settings applied: ", values);
             
-                class Badass2018ThemeDev extends VanillaTheme
-    {
-        constructor() {
-            super();
-            SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
-            //my initialization code goes here, after calling super()
-        }
-
-        // This method called by StarMash when the game is loading
-        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
-        {
-            const toChange = [
-                "gui.png",
-                "items.png",
-                "aircraft.png",
-                "map_sea_mask.jpg",
-                "map_sand_mask.jpg",
-                "map_rock_mask.jpg"];
-
-            for(let i in files)
-            {
-                let fileName = getFileName(files[i]);
-
-                if ($.inArray(fileName, toChange) > -1)
-                {
-                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + settings.values1 + "/" + getFileName(files[i]);
-                }
-            }
-        }
-        
-    }
-            
-            
+            window.flavor = settings.values1;
         }
 
         // Default values for the settings
@@ -97,16 +65,46 @@
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
     
-    console.log(settings.values1);
+    console.log(flavor);
     
-    if (settings.values1 == 'default') {
+    if (flavor == 'default') {
         
         console.log("SETTTTTTINGS")
         
     }
             
     
+    class Badass2018ThemeDev extends VanillaTheme
+    {
+        constructor() {
+            super();
+            SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
+            //my initialization code goes here, after calling super()
+        }
 
+        // This method called by StarMash when the game is loading
+        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
+        {
+            const toChange = [
+                "gui.png",
+                "items.png",
+                "aircraft.png",
+                "map_sea_mask.jpg",
+                "map_sand_mask.jpg",
+                "map_rock_mask.jpg"];
+
+            for(let i in files)
+            {
+                let fileName = getFileName(files[i]);
+
+                if ($.inArray(fileName, toChange) > -1)
+                {
+                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + settings.values1 + "/" + getFileName(files[i]);
+                }
+            }
+        }
+        
+    }
     
     // ------------------------------------------------------------------------
     
