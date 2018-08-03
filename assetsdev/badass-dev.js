@@ -110,12 +110,28 @@
                 if ($.inArray(fileName, toChange) > -1)
                 {
                     files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + settings.values1 + "/" + getFileName(files[i]);
-                    console.log("paf " + paf);
+                    //console.log("paf " + paf);
                 }
             }
         }
         
     }
+    
+    tn = function() {
+                    $.getJSON("assetsdev/map.json", function(an) {
+                        Ht.polygons = new PIXI.Graphics, Ht.polygons.beginFill();
+                        var cn = 0,
+                            hn = 0,
+                            fn = 0,
+                            rn, on, sn, dn, ln, un, pn;
+                        for (un = 0; un < an.length; un++)
+                            for (sn = 0, pn = 0; pn < an[un].length; pn++) {
+                                for (dn = [], ln = 0; ln < an[un][pn].length; ln += 2) rn = an[un][pn][ln] + hn, on = an[un][pn][ln + 1] + fn, dn.push(parseFloat(rn), -parseFloat(on)), hn = rn, fn = on, cn++;
+                                Ht.polygons.drawPolygon(dn), 0 != sn && Ht.polygons.addHole(), sn++
+                            }
+                        Ht.polygons.endFill(), en(), jt.map.addChild(Ht.polygons), jt.map.mask = Ht.polygons
+                    })
+                };
     
     // ------------------------------------------------------------------------
     
