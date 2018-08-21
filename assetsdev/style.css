@@ -1371,6 +1371,7 @@ input:focus {
 .message {
     font-family: 'Teko', sans-serif;
     font-style: italic;
+    text-transform: uppercase;
     pointer-events: none;
     display: none;
     position: absolute;
