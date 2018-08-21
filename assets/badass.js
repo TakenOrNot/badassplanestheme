@@ -83,11 +83,12 @@
     
     
     function initStyle () {
-
+        // SWAM.ZoomTo(2500);
+        // config.scalingFactor = 2500;
+        const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">`
         const style = `
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assets/loading.png') 50% 15% no-repeat;}
-            
             #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
             #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
             #flag-border-blue-right {}
@@ -95,10 +96,16 @@
             #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
                 border-width: 0 0 0 0px;
             }
+            #msg-destroyed, #msg-default, .message .playerbig, .message .player {
+                font-size: 25px;
+                padding: 0px 10px 0px 50px;
+                vertical-align: middle;
+            }
           </style>
         `;
-
-        // $('head').append ( style );
+        //$('#redditPanel').css('opacity', '1');
+        // $('body').addClass('smoothload');
+        $('head').append ( headstyle );
         $('body').append ( style );
 
     }
