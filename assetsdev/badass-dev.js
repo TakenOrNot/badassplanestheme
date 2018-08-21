@@ -149,6 +149,7 @@
     function initStyle () {
         // SWAM.ZoomTo(2500);
         // config.scalingFactor = 2500;
+        const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">`
         const style = `
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
@@ -164,7 +165,7 @@
         `;
         //$('#redditPanel').css('opacity', '1');
         // $('body').addClass('smoothload');
-        // $('head').append ( style );
+        $('head').append ( headstyle );
         $('body').append ( style );
 
     }
