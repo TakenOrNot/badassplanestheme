@@ -99,6 +99,7 @@
                 "gui.png",
                 "items.png",
                 "aircraft.png",
+                "mountains.png",
                 "map_sea.jpg",
                 "map_sand.jpg",
                 "map_sea_mask.jpg",
