@@ -162,6 +162,11 @@
             #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
                 border-width: 0 0 0 0px;
             }
+            #msg-destroyed, #msg-default, .message .playerbig, .message .player {
+                font-size: 25px;
+                padding: 0px 10px 0px 50px;
+                vertical-align: middle;
+            }
           </style>
         `;
         //$('#redditPanel').css('opacity', '1');
