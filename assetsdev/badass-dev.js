@@ -163,7 +163,7 @@
             }
             #msg-destroyed, #msg-default, .message .playerbig, .message .player {
                 font-size: 25px;
-                padding: 0px 0px 0px 20px;
+                padding: 0px 10px 0px 50px;
                 vertical-align: middle;
             }
           </style>
