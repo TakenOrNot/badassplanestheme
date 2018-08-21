@@ -110,7 +110,7 @@
 
                 if ($.inArray(fileName, toChange) > -1)
                 {
-                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + settings.values1 + "/" + getFileName(files[i]);
+                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/beach/" + getFileName(files[i]);
                     //console.log("paf " + paf);
                 }
             }
