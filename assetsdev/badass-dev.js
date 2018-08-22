@@ -169,7 +169,7 @@
             .message .playerbig, .message .player {color:red;}
             .message .playerbig .level, .message .player .level {color:white;}
 
-            .team2 > * > .message .playerbig, .message .player {color:blue;}
+            .team2 > .message .playerbig, .message .player {color:blue;}
           </style>
         `;
         //$('#redditPanel').css('opacity', '1');
@@ -185,7 +185,7 @@
 
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
         SWAM.on ( 'CTF_MatchEnded', onMatchEnded );
-        SWAM.on ( 'gamePrep', onGamePrep );
+        //SWAM.on ( 'gamePrep', onGamePrep );
         // SWAM.on ( 'gameWipe', onGameWipe );
 
     }
@@ -206,7 +206,8 @@
         toggleRed ( false );
         toggleBlue ( false );
     };
-    function onGamePrep () {
+    // function onGamePrep () {
+    SWAM.on ( 'gamePrep', function (){
         // toggleRed ( false );
         // toggleBlue ( false );
         // SWAM.ZoomTo(bdosf);
