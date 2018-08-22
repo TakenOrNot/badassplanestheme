@@ -185,7 +185,7 @@
 
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
         SWAM.on ( 'CTF_MatchEnded', onMatchEnded );
-        SWAM.on ( 'gamePrep', onGamePrep );
+        //SWAM.on ( 'gamePrep', onGamePrep );
         // SWAM.on ( 'gameWipe', onGameWipe );
 
     }
@@ -193,10 +193,6 @@
     SWAM.on ( 'gameLoaded', init );
     
     /* EVENTS */
-    
-    SWAM.on("playerRespawned", function(data){
-        
-    }
     
     function onMatchStarted () {
         toggleRed ( false );
@@ -206,8 +202,8 @@
         toggleRed ( false );
         toggleBlue ( false );
     };
-     function onGamePrep () {
-    //SWAM.on ( 'gamePrep', function (){
+    // function onGamePrep () {
+    SWAM.on ( 'gamePrep', function (){
         // toggleRed ( false );
         // toggleBlue ( false );
         // SWAM.ZoomTo(bdosf);
@@ -220,7 +216,13 @@
             console.log("flag already out " + redflagcheck);
         }
         
+        if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
+            $('body').removeClass('team1')
+        } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
+            $('body').removeClass('team2')
+        }
         
+        $('body').addClass('team' + game.myTeam);
         
         
     };
