@@ -103,6 +103,10 @@
                 padding: 0px 10px 0px 50px;
                 vertical-align: middle;
             }
+            .message .playerbig, .message .player {color:#dc4f46;}
+            .message .playerbig .level, .message .player .level {color:white;}
+
+            .team2 > .message .playerbig, .message .player {color:#4d7fd5;}
           </style>
         `;
         //$('#redditPanel').css('opacity', '1');
@@ -137,7 +141,7 @@
         toggleRed ( false );
         toggleBlue ( false );
     };
-    function onGamePrep () {
+    SWAM.on ( 'gamePrep', function (){
         // toggleRed ( false );
         // toggleBlue ( false );
         // SWAM.ZoomTo(bdosf);
@@ -150,7 +154,20 @@
             console.log("flag already out " + redflagcheck);
         }
         
-    };
+        
+        $('body').removeClass();
+        // probably useless :
+        // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
+        //    $('body').removeClass('team1')
+        // } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
+        //    $('body').removeClass('team2')
+        // }
+        
+        // TODO : check gametype before
+        $('body').addClass('team' + game.myTeam);
+        
+        
+    });
     // function onGameWipe () {
     //    toggleRed ( false );
     //    toggleBlue ( false );

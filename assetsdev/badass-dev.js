@@ -216,14 +216,16 @@
             console.log("flag already out " + redflagcheck);
         }
         
+        
         $('body').removeClass();
+        // probably useless :
+        // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
+        //    $('body').removeClass('team1')
+        // } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
+        //    $('body').removeClass('team2')
+        // }
         
-        if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
-            $('body').removeClass('team1')
-        } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
-            $('body').removeClass('team2')
-        }
-        
+        // TODO : check gametype before
         $('body').addClass('team' + game.myTeam);
         
         
