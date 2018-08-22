@@ -225,7 +225,7 @@
         $('body').addClass('team' + game.myTeam);
         
         
-    };
+    });
     // function onGameWipe () {
     //    toggleRed ( false );
     //    toggleBlue ( false );
