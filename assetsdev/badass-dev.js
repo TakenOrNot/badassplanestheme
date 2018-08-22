@@ -216,6 +216,8 @@
             console.log("flag already out " + redflagcheck);
         }
         
+        $('body').removeClass();
+        
         if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
             $('body').removeClass('team1')
         } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
