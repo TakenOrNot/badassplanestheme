@@ -166,6 +166,10 @@
                 padding: 0px 10px 0px 50px;
                 vertical-align: middle;
             }
+            .message .playerbig, .message .player {color:red;}
+            .message .playerbig .level, .message .player .level {color:white;}
+
+            .team2 > * > .message .playerbig, .message .player {color:blue;}
           </style>
         `;
         //$('#redditPanel').css('opacity', '1');
@@ -190,7 +194,9 @@
     
     /* EVENTS */
     
-    
+    SWAM.on("playerRespawned", function(data){
+        
+    }
     
     function onMatchStarted () {
         toggleRed ( false );
@@ -212,6 +218,16 @@
         if ( redflagcheck.lenght > 0){
             console.log("flag already out " + redflagcheck);
         }
+        
+        if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
+            $('body').removeClass('team1')
+        } 
+        else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
+            $('body').removeClass('team2')
+        }
+        
+        $('body').addClass('team' + game.myTeam);
+        
         
     };
     // function onGameWipe () {
