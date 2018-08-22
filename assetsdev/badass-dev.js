@@ -221,8 +221,7 @@
         
         if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
             $('body').removeClass('team1')
-        } 
-        else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
+        } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
             $('body').removeClass('team2')
         }
         
