@@ -166,10 +166,10 @@
                 padding: 0px 10px 0px 50px;
                 vertical-align: middle;
             }
-            .message .playerbig, .message .player {color:red;}
+            .message .playerbig, .message .player {color:#dc4f46;}
             .message .playerbig .level, .message .player .level {color:white;}
 
-            .team2 > .message .playerbig, .message .player {color:blue;}
+            .team2 > .message .playerbig, .message .player {color:#4d7fd5;}
           </style>
         `;
         //$('#redditPanel').css('opacity', '1');
