@@ -25,21 +25,21 @@ table {
     font-family: 'MontserratWeb';
     font-style: normal;
     font-weight: 400;
-    src: url("montserrat-semibold.woff2") format('woff2'),url("montserrat-semibold.woff") format('woff')
+    src: url("https://airma.sh/assets/montserrat-semibold.woff2") format('woff2'),url("https://airma.sh/assets/montserrat-semibold.woff") format('woff')
 }
 
 @font-face {
     font-family: 'MontserratWeb';
     font-style: normal;
     font-weight: 700;
-    src: url("montserrat-bold.woff2") format('woff2'),url("montserrat-bold.woff") format('woff')
+    src: url("https://airma.sh/assets/montserrat-bold.woff2") format('woff2'),url("https://airma.sh/assets/montserrat-bold.woff") format('woff')
 }
 
 @font-face {
     font-family: 'MontserratWeb';
     font-style: normal;
     font-weight: 800;
-    src: url("montserrat-extrabold.woff2") format('woff2'),url("montserrat-extrabold.woff") format('woff')
+    src: url("https://airma.sh/assets/montserrat-extrabold.woff2") format('woff2'),url("https://airma.sh/assets/montserrat-extrabold.woff") format('woff')
 }
 
 html {
