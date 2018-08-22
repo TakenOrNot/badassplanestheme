@@ -104,7 +104,7 @@
             .message .playerbig, .message .player {color:#dc4f46;}
             .message .playerbig .level, .message .player .level {color:white;}
 
-            .team2 > .message .playerbig, .message .player {color:#4d7fd5;}
+            .team2 > .message .playerbig, .team2 > .message .player {color:#4d7fd5;}
           </style>
         `;
         //$('#redditPanel').css('opacity', '1');
