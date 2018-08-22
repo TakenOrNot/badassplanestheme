@@ -198,6 +198,8 @@
     function onMatchStarted () {
         toggleRed ( false );
         toggleBlue ( false );
+        $('body').removeClass();
+        $('body').addClass('team' + game.myTeam);
     };
     function onMatchEnded () {
         toggleRed ( false );
