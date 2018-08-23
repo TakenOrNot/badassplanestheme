@@ -100,6 +100,7 @@
                 "items.png",
                 "aircraft.png",
                 "map_sea.jpg",
+                "map_sand.jpg",
                 "map_sea_mask.jpg",
                 "map_sand_mask.jpg",
                 "map_rock_mask.jpg"];
