@@ -120,18 +120,22 @@
                 "gui.png",
                 "items.png",
                 "aircraft.png",
+                "mountains.png",
                 "map_sea.jpg",
+                "map_sand.jpg",
                 "map_sea_mask.jpg",
                 "map_sand_mask.jpg",
-                "map_rock_mask.jpg"];
+                "map_rock_mask.jpg",
+                "shadows.png"];
             
             for(let i in files)
             {
+                var paf = 'dev';
                 let fileName = getFileName(files[i]);
 
                 if ($.inArray(fileName, toChange) > -1)
                 {
-                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + settings.values1 + "/" + getFileName(files[i]);
+                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + paf + "/" + getFileName(files[i]);
                     //console.log("paf " + paf);
                 }
             }
