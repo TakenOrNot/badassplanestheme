@@ -239,7 +239,7 @@
         // SWAM.ZoomTo(bdosf);
         
         
-        
+        $("#badassnews").css({display: "none"});
         $('body').removeClass();
         
         // probably useless :
