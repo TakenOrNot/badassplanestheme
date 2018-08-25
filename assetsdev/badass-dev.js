@@ -27,6 +27,7 @@
 
         // Default values for the settings
         let settings = {
+            customizeFb: true,
             values1: "default",
             
         };
@@ -34,7 +35,8 @@
         let sp = new SettingsProvider(settings, onApply);
     
         let section = sp.addSection("First Section");
-        
+        section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
+
         section.addValuesField("values1", "Flavor",
         {
             "default": "Default",
@@ -154,13 +156,7 @@
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
             #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
-            #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
-            #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
-            #flag-border-blue-right {}
-            #flag-border-red-left {}
-            #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
-                border-width: 0 0 0 0px;
-            }
+            
             #msg-destroyed, #msg-default, .message .playerbig, .message .player {
                 font-size: 25px;
                 padding: 0px 10px 0px 50px;
@@ -172,6 +168,21 @@
             .team2 > .message .playerbig, .team2 > .message .player {color:#4d7fd5;}
           </style>
         `;
+        
+        
+        
+        if (settings.customizeFb === true){
+            const optionnalFbStyle = `
+                #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
+                #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
+                #flag-border-blue-right {}
+                #flag-border-red-left {}
+                #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
+                    border-width: 0 0 0 0px;
+                }
+            `
+            $('body').append ( optionnalFbStyle );
+        }
         //$('#redditPanel').css('opacity', '1');
         // $('body').addClass('smoothload');
         $('head').append ( headstyle );
@@ -225,8 +236,10 @@
         //    $('body').removeClass('team2')
         // }
         
-        // TODO : check gametype before
-        $('body').addClass('team' + game.myTeam);
+        // check gametype before
+        if (game.gameType == SWAM.GAME_TYPE.CTF) {
+            $('body').addClass('team' + game.myTeam);
+        }
         
         
     });
