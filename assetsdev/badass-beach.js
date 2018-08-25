@@ -330,7 +330,7 @@
         id: "Badass2018beach",
         description: "Experimental",
         author: "xplay",
-        version: "1.0.1",
+        version: "1.0.2",
         settingsProvider: createSettingsProvider(),
         themes: [ Badass2018ThemeBeach ]
     });
