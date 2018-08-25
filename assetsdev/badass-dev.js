@@ -206,7 +206,7 @@
         $('body').append ( style );
 
     }
-    function initHtml () {
+    function initHTML () {
         $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js'>BEACH version available !</a> </li></ul></div>");
     }
     function initEvents () {
