@@ -207,7 +207,7 @@
 
     }
     function initHTML () {
-        $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js'>BEACH version available !</a> </li></ul></div>");
+        $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js' target='_blank'>BEACH version available !</a> </li><li>Jul 15 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-nukem.js' target='_blank'>NUKLEAR version available !</a> </li></ul></div>");
     }
     function initEvents () {
         
