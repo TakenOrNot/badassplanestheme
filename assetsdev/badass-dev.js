@@ -149,7 +149,7 @@
 
     function init () {
 
-        // initHTML ();
+        initHTML ();
         initStyle ();
         initEvents ();
         // window.bdosf = config.scalingFactor;
@@ -177,6 +177,7 @@
             #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
             #badassnews {
                 position: absolute;
+                top: 10px;
                 background: black;
                 margin-left: 50px;
                 width: 300px;
@@ -205,7 +206,9 @@
         $('body').append ( style );
 
     }
-    
+    function initHtml () {
+        $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js'>BEACH version available !</a> </li></ul></div>");
+    }
     function initEvents () {
         
         // SWAM.on ( 'CTF_FlagEvent', onFlagEvent );
@@ -238,7 +241,7 @@
         
         
         $('body').removeClass();
-        $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js'>BEACH version available !</a> </li></ul></div>")
+        
         // probably useless :
         // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
         //    $('body').removeClass('team1')
