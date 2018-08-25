@@ -226,14 +226,7 @@
         // toggleRed ( false );
         // toggleBlue ( false );
         // SWAM.ZoomTo(bdosf);
-        var blueflagcheck = $( "#blueflag-name" ).justtext(); 
-        var redflagcheck = $( "#redflag-name" ).justtext();
-        if ( blueflagcheck.lenght > 0){
-            console.log("flag already out " + blueflagcheck);
-        };
-        if ( redflagcheck.lenght > 0){
-            console.log("flag already out " + redflagcheck);
-        }
+        
         
         
         $('body').removeClass();
@@ -247,6 +240,17 @@
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);
+            
+            // var blueflagcheck = $( "#blueflag-name" ).justtext(); 
+            // var redflagcheck = $( "#redflag-name" ).justtext();
+            //if ( blueflagcheck.lenght > 0){
+            if ( $( "#blueflag-name" ).justtext()){
+                console.log("flag already out " + blueflagcheck);
+            };
+            // if ( redflagcheck.lenght > 0){
+            if ( $( "#redflag-name" ).justtext()){
+                console.log("flag already out " + redflagcheck);
+            }
         }
         
         
