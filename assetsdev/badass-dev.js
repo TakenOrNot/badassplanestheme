@@ -47,7 +47,7 @@
         // Default values for the settings
         let settings = {
             customizeFb: false,
-            values1: "default",
+            // values1: "default",
             
         };
 
@@ -56,11 +56,11 @@
         let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
 
-        section.addValuesField("values1", "Flavor",
-        {
-            "default": "Default",
-            "nuklear": "Nuklear"
-        });
+        // section.addValuesField("values1", "Flavor",
+        // {
+        //    "default": "Default",
+        //    "nuklear": "Nuklear"
+        // });
         
         
         
@@ -175,7 +175,15 @@
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
             #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
-            
+            #badassnews {
+                position: absolute;
+                background: black;
+                margin-left: 50px;
+                width: 300px;
+                font-size : 11px;
+                color: lime;
+                border-radius: 10px;
+            }
             #msg-destroyed, #msg-default, .message .playerbig, .message .player {
                 font-size: 25px;
                 padding: 0px 10px 0px 50px;
@@ -230,6 +238,7 @@
         
         
         $('body').removeClass();
+        $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js'>BEACH version available !</a> </li></ul></div>")
         // probably useless :
         // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
         //    $('body').removeClass('team1')
@@ -244,7 +253,8 @@
             // var blueflagcheck = $( "#blueflag-name" ).justtext(); 
             // var redflagcheck = $( "#redflag-name" ).justtext();
             //if ( blueflagcheck.lenght > 0){
-            if ( $( "#blueflag-name" ).justtext() !== null && $( "#blueflag-name" ).justtext() !== ''){
+            // doesnt work for some reason (?) :
+            if ( $( "#blueflag-name" ).justtext() !== null && $( "#blueflag-name" ).justtext() !== '' ){
                 console.log("blue flag already out ");
             };
             // if ( redflagcheck.lenght > 0){
@@ -303,7 +313,7 @@
         id: "Badass2018dev",
         description: "Experimental",
         author: "xplay",
-        version: "1.0.1",
+        version: "1.0.2",
         settingsProvider: createSettingsProvider(),
         themes: [ Badass2018ThemeDev ]
     });
