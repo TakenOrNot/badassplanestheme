@@ -39,7 +39,7 @@
                 $('body').append ( optionnalFbStyle );
             } 
             else {
-                $('body').remove('#optionnalFbStyle'); 
+                $('#optionnalFbStyle').remove(); 
                 
             }
         }
