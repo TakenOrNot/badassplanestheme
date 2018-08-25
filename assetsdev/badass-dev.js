@@ -27,14 +27,14 @@
 
         // Default values for the settings
         let settings = {
-            customizeFb: true,
+            customizeFb: false,
             values1: "default",
             
         };
 
         let sp = new SettingsProvider(settings, onApply);
     
-        let section = sp.addSection("First Section");
+        let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
 
         section.addValuesField("values1", "Flavor",
@@ -173,13 +173,15 @@
         
         if (settings.customizeFb === true){
             const optionnalFbStyle = `
-                #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
-                #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
-                #flag-border-blue-right {}
-                #flag-border-red-left {}
-                #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
-                    border-width: 0 0 0 0px;
-                }
+                <style id='optionnalFbStyle'>
+                    #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
+                    #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
+                    #flag-border-blue-right {}
+                    #flag-border-red-left {}
+                    #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
+                        border-width: 0 0 0 0px;
+                    }
+                </style>
             `
             $('body').append ( optionnalFbStyle );
         }
@@ -239,6 +241,10 @@
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);
+        }
+        
+        if (settings.customizeFb === false){
+            $('body').remove('#optionnalFbStyle');    
         }
         
         
