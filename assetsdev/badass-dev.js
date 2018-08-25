@@ -23,6 +23,9 @@
             //    console.log("SETTTTTTINGS")
 
             // }
+            if (settings.customizeFb === true){
+                console.log("customizeFb !!");
+            }
         }
 
         // Default values for the settings
