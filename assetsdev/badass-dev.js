@@ -244,11 +244,11 @@
             // var blueflagcheck = $( "#blueflag-name" ).justtext(); 
             // var redflagcheck = $( "#redflag-name" ).justtext();
             //if ( blueflagcheck.lenght > 0){
-            if ( $( "#blueflag-name" ).justtext()){
+            if ( $( "#blueflag-name" ).justtext() !== ""){
                 console.log("blue flag already out ");
             };
             // if ( redflagcheck.lenght > 0){
-            if ( $( "#redflag-name" ).justtext()){
+            if ( $( "#redflag-name" ).justtext() !== ""){
                 console.log("red flag already out ");
             }
         }
