@@ -23,23 +23,44 @@
             //    console.log("SETTTTTTINGS")
 
             // }
+            if (settings.customizeFb === true){
+                console.log("customizeFb !!");
+                const optionnalFbStyle = `
+                    <style id='optionnalFbStyle'>
+                        #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
+                        #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
+                        #flag-border-blue-right {}
+                        #flag-border-red-left {}
+                        #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
+                            border-width: 0 0 0 0px;
+                        }
+                    </style>
+                `
+                $('body').append ( optionnalFbStyle );
+            } 
+            else {
+                $('#optionnalFbStyle').remove(); 
+                
+            }
         }
 
         // Default values for the settings
         let settings = {
-            values1: "default",
+            customizeFb: false,
+            // values1: "default",
             
         };
 
         let sp = new SettingsProvider(settings, onApply);
     
-        let section = sp.addSection("First Section");
-        
-        section.addValuesField("values1", "Flavor",
-        {
-            "default": "Default",
-            "nuklear": "Nuklear"
-        });
+        let section = sp.addSection("Look & feel");
+        section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
+
+        // section.addValuesField("values1", "Flavor",
+        // {
+        //    "default": "Default",
+        //    "nuklear": "Nuklear"
+        // });
         
         
         
@@ -99,6 +120,7 @@
                 "gui.png",
                 "items.png",
                 "aircraft.png",
+                "mountains.png",
                 "map_sea.jpg",
                 "map_sand.jpg",
                 "map_sea_mask.jpg",
@@ -108,11 +130,12 @@
             
             for(let i in files)
             {
+                var paf = 'beach';
                 let fileName = getFileName(files[i]);
 
                 if ($.inArray(fileName, toChange) > -1)
                 {
-                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/beach/" + getFileName(files[i]);
+                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + paf + "/" + getFileName(files[i]);
                     //console.log("paf " + paf);
                 }
             }
@@ -130,7 +153,7 @@
 
     function init () {
 
-        // initHTML ();
+        initHTML ();
         initStyle ();
         initEvents ();
         // window.bdosf = config.scalingFactor;
@@ -151,16 +174,20 @@
     function initStyle () {
         // SWAM.ZoomTo(2500);
         // config.scalingFactor = 2500;
+        const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">`
         const style = `
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
             #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
-            #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
-            #flag-border-blue-left:not([style*="display: none"]){-webkit-animation: neonblueleft .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(0,212,255,0.5) 32%, rgba(9,9,121,0) 67%, rgba(9,9,121,0) 100%); height : 4%; top: -2%; }
-            #flag-border-blue-right {}
-            #flag-border-red-left {}
-            #flag-border-blue-left, #flag-border-blue-right, #flag-border-red-left, #flag-border-red-right {
-                border-width: 0 0 0 0px;
+            #badassnews {
+                position: absolute;
+                top: 10px;
+                background: black;
+                margin-left: 50px;
+                width: 300px;
+                font-size : 11px;
+                color: lime;
+                border-radius: 10px;
             }
             #msg-destroyed, #msg-default, .message .playerbig, .message .player {
                 font-size: 25px;
@@ -173,20 +200,26 @@
             .team2 > .message .playerbig, .team2 > .message .player {color:#4d7fd5;}
           </style>
         `;
+        
+        
+        
+        
         //$('#redditPanel').css('opacity', '1');
         // $('body').addClass('smoothload');
-        // $('head').append ( style );
+        $('head').append ( headstyle );
         $('body').append ( style );
 
     }
-    
+    function initHTML () {
+        $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js' target='_blank'>BEACH version available !</a> </li><li>Jul 15 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-nukem.js' target='_blank'>NUKLEAR version available !</a> </li></ul></div>");
+    }
     function initEvents () {
         
         // SWAM.on ( 'CTF_FlagEvent', onFlagEvent );
 
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
         SWAM.on ( 'CTF_MatchEnded', onMatchEnded );
-        // SWAM.on ( 'gamePrep', onGamePrep );
+        //SWAM.on ( 'gamePrep', onGamePrep );
         // SWAM.on ( 'gameWipe', onGameWipe );
 
     }
@@ -195,33 +228,24 @@
     
     /* EVENTS */
     
-    
-    
     function onMatchStarted () {
         toggleRed ( false );
         toggleBlue ( false );
-        $('body').removeClass();
-        $('body').addClass('team' + game.myTeam);
     };
     function onMatchEnded () {
         toggleRed ( false );
         toggleBlue ( false );
     };
+    // function onGamePrep () {
     SWAM.on ( 'gamePrep', function (){
         // toggleRed ( false );
         // toggleBlue ( false );
         // SWAM.ZoomTo(bdosf);
-        var blueflagcheck = $( "#blueflag-name" ).justtext(); 
-        var redflagcheck = $( "#redflag-name" ).justtext();
-        if ( blueflagcheck.lenght > 0){
-            console.log("flag already out " + blueflagcheck);
-        };
-        if ( redflagcheck.lenght > 0){
-            console.log("flag already out " + redflagcheck);
-        }
         
         
+        $("#badassnews").css({display: "none"});
         $('body').removeClass();
+        
         // probably useless :
         // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
         //    $('body').removeClass('team1')
@@ -229,8 +253,24 @@
         //    $('body').removeClass('team2')
         // }
         
-        // TODO : check gametype before
-        $('body').addClass('team' + game.myTeam);
+        // check gametype before
+        if (game.gameType == SWAM.GAME_TYPE.CTF) {
+            $('body').addClass('team' + game.myTeam);
+            
+            // var blueflagcheck = $( "#blueflag-name" ).justtext(); 
+            // var redflagcheck = $( "#redflag-name" ).justtext();
+            //if ( blueflagcheck.lenght > 0){
+            // doesnt work for some reason (?) :
+            if ( $( "#blueflag-name" ).justtext() !== null && $( "#blueflag-name" ).justtext() !== '' ){
+                console.log("blue flag already out ");
+            };
+            // if ( redflagcheck.lenght > 0){
+            if ( $( "#redflag-name" ).justtext() !== null && $( "#redflag-name" ).justtext() !== ''){
+                console.log("red flag already out ");
+            }
+        }
+        
+        
         
         
     });
