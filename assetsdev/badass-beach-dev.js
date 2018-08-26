@@ -334,6 +334,6 @@
         author: "xplay",
         version: "1.0.2",
         settingsProvider: createSettingsProvider(),
-        themes: [ Badass2018ThemeBeach ]
+        themes: [ Badass2018ThemeBeachDev ]
     });
 }();
