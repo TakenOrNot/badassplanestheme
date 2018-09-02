@@ -221,7 +221,7 @@
                     // if element already exist, dont add it again
         }
         else {
-            $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js' target='_blank'>BEACH version available !</a> </li><li>Jul 15 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-nukem.js' target='_blank'>NUKLEAR version available !</a> </li></ul></div>");
+            $('body').append( "<div id='badassnews'><ul><li>Sep 2 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-bright.js' target='_blank'>BRIGHT version available !</a> </li><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js' target='_blank'>BEACH version available !</a> </li><li>Jul 15 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-nukem.js' target='_blank'>NUKLEAR version available !</a> </li><li>May 23 2018 - <a href='https://takenornot.github.io/badassplanestheme/assets/badass.js' target='_blank'>CLASSIC version available !</a> </li></ul></div>");
         }
     }
     function initEvents () {

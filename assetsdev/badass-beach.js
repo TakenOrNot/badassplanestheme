@@ -7,7 +7,7 @@
 {
     var paf = '';
     // Settings
-    
+
     function createSettingsProvider()
     {
         // This is the handler that will be executed when new settings are applied
@@ -42,10 +42,10 @@
                 else {
                     $('body').append ( optionnalFbStyle );
                 }
-            } 
+            }
             else {
-                $('#optionnalFbStyle').remove(); 
-                
+                $('#optionnalFbStyle').remove();
+
             }
         }
 
@@ -53,11 +53,11 @@
         let settings = {
             customizeFb: false,
             // values1: "default",
-            
+
         };
 
         let sp = new SettingsProvider(settings, onApply);
-    
+
         let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
 
@@ -66,22 +66,22 @@
         //    "default": "Default",
         //    "nuklear": "Nuklear"
         // });
-        
-        
-        
+
+
+
         // we return our SettingsProvider instance
         return sp;
     }
-    
-    
+
+
     //function getFlavor()
     //{
     //    flavor = settings.values1;
     //    return flavor;
     //}
-    
+
     // ------------------------------------------------------------------------
-    
+
     // Returns the filename part of an AirMash's image URL
     function getFileName(str)
     {
@@ -92,7 +92,7 @@
     }
 
     jQuery.fn.justtext = function() {
-  
+
         return $(this)	.clone()
                 .children()
                 .remove()
@@ -100,16 +100,16 @@
                 .text();
 
     };
-    
+
     // ------------------------------------------------------------------------
 
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-    
-    
-            
-    
+
+
+
+
     class Badass2018ThemeBeach extends VanillaTheme
     {
         constructor() {
@@ -117,7 +117,7 @@
             SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
             //my initialization code goes here, after calling super()
         }
-        
+
         // This method called by StarMash when the game is loading
         injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures,paf)
         {
@@ -132,7 +132,7 @@
                 "map_sand_mask.jpg",
                 "map_rock_mask.jpg",
                 "shadows.png"];
-            
+
             for(let i in files)
             {
                 var paf = 'beach';
@@ -145,14 +145,14 @@
                 }
             }
         }
-        
+
     }
 
     //let map = game.graphics.layers.map; // land layers container
     //map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
     // ------------------------------------------------------------------------
-    
-    // embed fork of Moz's Flag Borders 
+
+    // embed fork of Moz's Flag Borders
     // https://github.com/fabiospampinato/airmash-swam-extensions/blob/master/extensions/flag_borders.js
     /* INIT */
 
@@ -165,16 +165,16 @@
         // console.log("bdosf = " + bdosf)
         // window.flavor = settings.values1;
         // console.log(flavor);
-    
+
         //if (flavor == 'default') {
 
         //    console.log("SETTTTTTINGS")
 
         //}
-        
+
     }
-    
-    
+
+
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
         // SWAM.ZoomTo(2500);
@@ -205,10 +205,10 @@
             .team2 > .message .playerbig, .team2 > .message .player {color:#4d7fd5;}
           </style>
         `;
-        
-        
-        
-        
+
+
+
+
         //$('#redditPanel').css('opacity', '1');
         // $('body').addClass('smoothload');
         $('head').append ( headstyle );
@@ -220,11 +220,11 @@
                     // if element already exist, dont add it again
         }
         else {
-            $('body').append( "<div id='badassnews'><ul><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js' target='_blank'>BEACH version available !</a> </li><li>Jul 15 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-nukem.js' target='_blank'>NUKLEAR version available !</a> </li></ul></div>");
+            $('body').append( "<div id='badassnews'><ul><li>Sep 2 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-bright.js' target='_blank'>BRIGHT version available !</a> </li><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js' target='_blank'>BEACH version available !</a> </li><li>Jul 15 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-nukem.js' target='_blank'>NUKLEAR version available !</a> </li><li>May 23 2018 - <a href='https://takenornot.github.io/badassplanestheme/assets/badass.js' target='_blank'>CLASSIC version available !</a> </li></ul></div>");
         }
     }
     function initEvents () {
-        
+
         // SWAM.on ( 'CTF_FlagEvent', onFlagEvent );
 
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
@@ -233,11 +233,11 @@
         // SWAM.on ( 'gameWipe', onGameWipe );
 
     }
-    
+
     SWAM.on ( 'gameLoaded', init );
-    
+
     /* EVENTS */
-    
+
     function onMatchStarted () {
         toggleRed ( false );
         toggleBlue ( false );
@@ -253,23 +253,23 @@
         // toggleRed ( false );
         // toggleBlue ( false );
         // SWAM.ZoomTo(bdosf);
-        
-        
+
+
         $("#badassnews").css({display: "none"});
         $('body').removeClass();
-        
+
         // probably useless :
         // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
         //    $('body').removeClass('team1')
         // } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
         //    $('body').removeClass('team2')
         // }
-        
+
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);
-            
-            // var blueflagcheck = $( "#blueflag-name" ).justtext(); 
+
+            // var blueflagcheck = $( "#blueflag-name" ).justtext();
             // var redflagcheck = $( "#redflag-name" ).justtext();
             //if ( blueflagcheck.lenght > 0){
             // doesnt work for some reason (?) :
@@ -281,16 +281,16 @@
                 console.log("red flag already out ");
             }
         }
-        
-        
-        
-        
+
+
+
+
     });
     // function onGameWipe () {
     //    toggleRed ( false );
     //    toggleBlue ( false );
     // };
-     
+
     /* API */
 
   function _toggleElement ( selector, force ) {
@@ -313,10 +313,10 @@
     _toggleElement ( '#flag-border-red-left', force );
     _toggleElement ( '#flag-border-red-right', force );
   }
-    
-    
+
+
     // ------------------------------------------------------------------------
-    
+
     // We add some metadata to our theme class
     $.extend(Badass2018ThemeBeach, {
         themeName: "Badass Planes Theme Beach",
