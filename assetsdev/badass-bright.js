@@ -7,7 +7,7 @@
 {
     var paf = '';
     // Settings
-    
+
     function createSettingsProvider()
     {
         // This is the handler that will be executed when new settings are applied
@@ -42,10 +42,10 @@
                 else {
                     $('body').append ( optionnalFbStyle );
                 }
-            } 
+            }
             else {
-                $('#optionnalFbStyle').remove(); 
-                
+                $('#optionnalFbStyle').remove();
+
             }
         }
 
@@ -53,11 +53,11 @@
         let settings = {
             customizeFb: false,
             // values1: "default",
-            
+
         };
 
         let sp = new SettingsProvider(settings, onApply);
-    
+
         let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
 
@@ -66,22 +66,22 @@
         //    "default": "Default",
         //    "nuklear": "Nuklear"
         // });
-        
-        
-        
+
+
+
         // we return our SettingsProvider instance
         return sp;
     }
-    
-    
+
+
     //function getFlavor()
     //{
     //    flavor = settings.values1;
     //    return flavor;
     //}
-    
+
     // ------------------------------------------------------------------------
-    
+
     // Returns the filename part of an AirMash's image URL
     function getFileName(str)
     {
@@ -92,7 +92,7 @@
     }
 
     jQuery.fn.justtext = function() {
-  
+
         return $(this)	.clone()
                 .children()
                 .remove()
@@ -100,24 +100,24 @@
                 .text();
 
     };
-    
+
     // ------------------------------------------------------------------------
 
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-    
-    
-            
-    
-    class Badass2018ThemeDev extends VanillaTheme
+
+
+
+
+    class Badass2018ThemeBright extends VanillaTheme
     {
         constructor() {
             super();
             SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
             //my initialization code goes here, after calling super()
         }
-        
+
         // This method called by StarMash when the game is loading
         injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures,paf)
         {
@@ -133,10 +133,10 @@
                 "map_sand_mask.jpg",
                 "map_rock_mask.jpg",
                 "shadows.png"];
-            
+
             for(let i in files)
             {
-                var paf = 'dev';
+                var paf = 'bright';
                 let fileName = getFileName(files[i]);
 
                 if ($.inArray(fileName, toChange) > -1)
@@ -146,14 +146,14 @@
                 }
             }
         }
-        
+
     }
 
     //let map = game.graphics.layers.map; // land layers container
     //map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
     // ------------------------------------------------------------------------
-    
-    // embed fork of Moz's Flag Borders 
+
+    // embed fork of Moz's Flag Borders
     // https://github.com/fabiospampinato/airmash-swam-extensions/blob/master/extensions/flag_borders.js
     /* INIT */
 
@@ -166,16 +166,16 @@
         // console.log("bdosf = " + bdosf)
         // window.flavor = settings.values1;
         // console.log(flavor);
-    
+
         //if (flavor == 'default') {
 
         //    console.log("SETTTTTTINGS")
 
         //}
-        
+
     }
-    
-    
+
+
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
         // SWAM.ZoomTo(2500);
@@ -206,10 +206,10 @@
             .team2 > .message .playerbig, .team2 > .message .player {color:#4d7fd5;}
           </style>
         `;
-        
-        
-        
-        
+
+
+
+
         //$('#redditPanel').css('opacity', '1');
         // $('body').addClass('smoothload');
         $('head').append ( headstyle );
@@ -225,7 +225,7 @@
         }
     }
     function initEvents () {
-        
+
         // SWAM.on ( 'CTF_FlagEvent', onFlagEvent );
 
         SWAM.on ( 'CTF_MatchStarted', onMatchStarted );
@@ -234,11 +234,11 @@
         // SWAM.on ( 'gameWipe', onGameWipe );
 
     }
-    
+
     SWAM.on ( 'gameLoaded', init );
-    
+
     /* EVENTS */
-    
+
     function onMatchStarted () {
         toggleRed ( false );
         toggleBlue ( false );
@@ -254,23 +254,23 @@
         // toggleRed ( false );
         // toggleBlue ( false );
         // SWAM.ZoomTo(bdosf);
-        
-        
+
+
         $("#badassnews").css({display: "none"});
         $('body').removeClass();
-        
+
         // probably useless :
         // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
         //    $('body').removeClass('team1')
         // } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
         //    $('body').removeClass('team2')
         // }
-        
+
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);
-            
-            // var blueflagcheck = $( "#blueflag-name" ).justtext(); 
+
+            // var blueflagcheck = $( "#blueflag-name" ).justtext();
             // var redflagcheck = $( "#redflag-name" ).justtext();
             //if ( blueflagcheck.lenght > 0){
             // doesnt work for some reason (?) :
@@ -282,16 +282,16 @@
                 console.log("red flag already out ");
             }
         }
-        
-        
-        
-        
+
+
+
+
     });
     // function onGameWipe () {
     //    toggleRed ( false );
     //    toggleBlue ( false );
     // };
-     
+
     /* API */
 
   function _toggleElement ( selector, force ) {
@@ -314,13 +314,13 @@
     _toggleElement ( '#flag-border-red-left', force );
     _toggleElement ( '#flag-border-red-right', force );
   }
-    
-    
+
+
     // ------------------------------------------------------------------------
-    
+
     // We add some metadata to our theme class
-    $.extend(Badass2018ThemeDev, {
-        themeName: "Badass Planes Theme Dev",
+    $.extend(Badass2018ThemeBright, {
+        themeName: "Badass Planes Theme Bright",
         description: "Experimental",
         author: "xplay"
     });
@@ -329,12 +329,12 @@
 
     // Register our extension and theme
     SWAM.registerExtension({
-        name: "Badass Planes Theme Extension DEV",
-        id: "Badass2018dev",
+        name: "Badass Planes Theme Extension BRIGHT",
+        id: "Badass2018bright",
         description: "Experimental",
         author: "xplay",
         version: "1.0.2",
         settingsProvider: createSettingsProvider(),
-        themes: [ Badass2018ThemeDev ]
+        themes: [ Badass2018ThemeBright ]
     });
 }();
