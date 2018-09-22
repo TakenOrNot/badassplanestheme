@@ -320,7 +320,7 @@
 
     // We add some metadata to our theme class
     $.extend(Badass2018ThemeBright, {
-        themeName: "Badass Planes Theme Bright",
+        themeName: "☀️💀 Badass Planes Theme Bright bg 💀☀️",
         description: "Experimental",
         author: "xplay"
     });
@@ -329,7 +329,7 @@
 
     // Register our extension and theme
     SWAM.registerExtension({
-        name: "Badass Planes Theme Extension BRIGHT",
+        name: "Badass Planes Theme Extension BRIGHT BG",
         id: "Badass2018bright",
         description: "Experimental",
         author: "xplay",

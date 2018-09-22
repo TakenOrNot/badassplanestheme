@@ -319,7 +319,7 @@
 
     // We add some metadata to our theme class
     $.extend(Badass2018ThemeBeach, {
-        themeName: "Badass Planes Theme Beach",
+        themeName: "🌴💀 Badass Planes Theme Beach 💀🌴",
         description: "Experimental",
         author: "xplay"
     });
