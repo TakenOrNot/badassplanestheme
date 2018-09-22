@@ -66,16 +66,6 @@
             str = str.substr(0, str.indexOf("?"));
         return str;
     }
-
-    jQuery.fn.justtext = function() {
-  
-        return $(this)	.clone()
-                .children()
-                .remove()
-                .end()
-                .text();
-
-    };
     
     // ------------------------------------------------------------------------
 
