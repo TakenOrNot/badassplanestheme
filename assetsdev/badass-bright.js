@@ -5,7 +5,6 @@
 
 !function()
 {
-    var paf = '';
     // Settings
 
     function createSettingsProvider()
