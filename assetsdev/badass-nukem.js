@@ -45,8 +45,6 @@
         // Default values for the settings
         let settings = {
             customizeFb: false,
-            // values1: "default",
-            
         };
 
         let sp = new SettingsProvider(settings, onApply);
@@ -125,8 +123,6 @@
         
     }
 
-    //let map = game.graphics.layers.map; // land layers container
-    //map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
     // ------------------------------------------------------------------------
     
     // embed fork of Moz's Flag Borders 
@@ -171,12 +167,7 @@
             .team2 > .message .playerbig, .team2 > .message .player {color:#4d7fd5;}
           </style>
         `;
-        
-        
-        
-        
-        //$('#redditPanel').css('opacity', '1');
-        // $('body').addClass('smoothload');
+
         $('head').append ( headstyle );
         $('body').append ( style );
 
@@ -216,21 +207,8 @@
     };
     // function onGamePrep () {
     SWAM.on ( 'gamePrep', function (){
-        // toggleRed ( false );
-        // toggleBlue ( false );
-        // SWAM.ZoomTo(bdosf);
-        
-        
         $("#badassnews").css({display: "none"});
         $('body').removeClass();
-        
-        // probably useless :
-        // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
-        //    $('body').removeClass('team1')
-        // } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
-        //    $('body').removeClass('team2')
-        // }
-        
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);

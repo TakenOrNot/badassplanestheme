@@ -15,14 +15,7 @@
         {
             console.log ("New settings applied: ", values);
             settings = values;
-            // window.flavor = settings.values1;
-            console.log(settings.values1);
-            
-            // if (flavor == 'default') {
 
-            //    console.log("SETTTTTTINGS")
-
-            // }
             if (settings.customizeFb === true){
                 console.log("customizeFb !!");
                 const optionnalFbStyle = `
@@ -52,33 +45,15 @@
         // Default values for the settings
         let settings = {
             customizeFb: false,
-            // values1: "default",
-
         };
 
         let sp = new SettingsProvider(settings, onApply);
 
         let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
-
-        // section.addValuesField("values1", "Flavor",
-        // {
-        //    "default": "Default",
-        //    "nuklear": "Nuklear"
-        // });
-
-
-
         // we return our SettingsProvider instance
         return sp;
     }
-
-
-    //function getFlavor()
-    //{
-    //    flavor = settings.values1;
-    //    return flavor;
-    //}
 
     // ------------------------------------------------------------------------
 
@@ -106,9 +81,6 @@
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-
-
-
 
     class Badass2018ThemeBeach extends VanillaTheme
     {
@@ -148,8 +120,6 @@
 
     }
 
-    //let map = game.graphics.layers.map; // land layers container
-    //map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
     // ------------------------------------------------------------------------
 
     // embed fork of Moz's Flag Borders
@@ -161,24 +131,12 @@
         initHTML ();
         initStyle ();
         initEvents ();
-        // window.bdosf = config.scalingFactor;
-        // console.log("bdosf = " + bdosf)
-        // window.flavor = settings.values1;
-        // console.log(flavor);
-
-        //if (flavor == 'default') {
-
-        //    console.log("SETTTTTTINGS")
-
-        //}
 
     }
 
-
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
-        // SWAM.ZoomTo(2500);
-        // config.scalingFactor = 2500;
+
         const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">`
         const style = `
           <style>
@@ -207,17 +165,13 @@
         `;
 
 
-
-
-        //$('#redditPanel').css('opacity', '1');
-        // $('body').addClass('smoothload');
         $('head').append ( headstyle );
         $('body').append ( style );
 
     }
     function initHTML () {
         if ( $( "#badassnews" ).length ) {
-                    // if element already exist, dont add it again
+            // if element already exist, dont add it again
         }
         else {
             $('body').append( "<div id='badassnews'><ul><li>Sep 2 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-bright.js' target='_blank'>BRIGHT version available !</a> </li><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js' target='_blank'>BEACH version available !</a> </li><li>Jul 15 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-nukem.js' target='_blank'>NUKLEAR version available !</a> </li><li>May 23 2018 - <a href='https://takenornot.github.io/badassplanestheme/assets/badass.js' target='_blank'>CLASSIC version available !</a> </li></ul></div>");
@@ -250,29 +204,15 @@
     };
     // function onGamePrep () {
     SWAM.on ( 'gamePrep', function (){
-        // toggleRed ( false );
-        // toggleBlue ( false );
-        // SWAM.ZoomTo(bdosf);
-
 
         $("#badassnews").css({display: "none"});
         $('body').removeClass();
-
-        // probably useless :
-        // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
-        //    $('body').removeClass('team1')
-        // } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
-        //    $('body').removeClass('team2')
-        // }
 
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);
 
         }
-
-
-
 
     });
     // function onGameWipe () {
