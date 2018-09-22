@@ -245,8 +245,7 @@
         // } else if ($('body').hasClass('team2') && (game.myTeam !== 'team2' )) {
         //    $('body').removeClass('team2')
         // }
-        
-        // TODO : check gametype before
+
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);

@@ -269,17 +269,6 @@
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);
 
-            // var blueflagcheck = $( "#blueflag-name" ).justtext();
-            // var redflagcheck = $( "#redflag-name" ).justtext();
-            //if ( blueflagcheck.lenght > 0){
-            // doesnt work for some reason (?) :
-            if ( $( "#blueflag-name" ).justtext() !== null && $( "#blueflag-name" ).justtext() !== '' ){
-                console.log("blue flag already out ");
-            };
-            // if ( redflagcheck.lenght > 0){
-            if ( $( "#redflag-name" ).justtext() !== null && $( "#redflag-name" ).justtext() !== ''){
-                console.log("red flag already out ");
-            }
         }
 
 
