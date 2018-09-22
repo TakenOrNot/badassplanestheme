@@ -227,9 +227,7 @@
         toggleBlue ( false );
     };
     SWAM.on ( 'gamePrep', function (){
-        // toggleRed ( false );
-        // toggleBlue ( false );
-        // SWAM.ZoomTo(bdosf);
+        /*
         var blueflagcheck = $( "#blueflag-name" ).justtext(); 
         var redflagcheck = $( "#redflag-name" ).justtext();
         if ( blueflagcheck.lenght > 0){
@@ -238,8 +236,8 @@
         if ( redflagcheck.lenght > 0){
             console.log("flag already out " + redflagcheck);
         }
-        
-        
+        */
+        $("#badassnews").css({display: "none"});
         $('body').removeClass();
         // probably useless :
         // if ($('body').hasClass('team1') && (game.myTeam !== 'team1' )) {
@@ -249,7 +247,10 @@
         // }
         
         // TODO : check gametype before
-        $('body').addClass('team' + game.myTeam);
+        // check gametype before
+        if (game.gameType == SWAM.GAME_TYPE.CTF) {
+            $('body').addClass('team' + game.myTeam);
+        }
         
         
     });
