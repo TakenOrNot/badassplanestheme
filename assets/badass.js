@@ -16,13 +16,8 @@
             console.log ("New settings applied: ", values);
             settings = values;
             // window.flavor = settings.values1;
-            console.log(settings.values1);
-            paf = settings.values1;
-            // if (flavor == 'default') {
-
-            //    console.log("SETTTTTTINGS")
-
-            // }
+            //console.log(settings.values1);
+            
             if (settings.customizeFb === true){
                 console.log("customizeFb !!");
                 const optionnalFbStyle = `

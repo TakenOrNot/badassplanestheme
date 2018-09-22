@@ -15,14 +15,7 @@
         {
             console.log ("New settings applied: ", values);
             settings = values;
-            // window.flavor = settings.values1;
-            console.log(settings.values1);
-            paf = settings.values1;
-            // if (flavor == 'default') {
 
-            //    console.log("SETTTTTTINGS")
-
-            // }
             if (settings.customizeFb === true){
                 console.log("customizeFb !!");
                 const optionnalFbStyle = `
@@ -66,19 +59,10 @@
         //    "default": "Default",
         //    "nuklear": "Nuklear"
         // });
-        
-        
-        
+               
         // we return our SettingsProvider instance
         return sp;
     }
-    
-    
-    //function getFlavor()
-    //{
-    //    flavor = settings.values1;
-    //    return flavor;
-    //}
     
     // ------------------------------------------------------------------------
     
@@ -106,10 +90,7 @@
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-    
-    
-            
-    
+       
     class Badass2018ThemeDev extends VanillaTheme
     {
         constructor() {
@@ -178,8 +159,7 @@
     
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
-        // SWAM.ZoomTo(2500);
-        // config.scalingFactor = 2500;
+
         const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">`
         const style = `
           <style>
@@ -274,6 +254,7 @@
             // var redflagcheck = $( "#redflag-name" ).justtext();
             //if ( blueflagcheck.lenght > 0){
             // doesnt work for some reason (?) :
+            /*
             if ( $( "#blueflag-name" ).justtext() !== null && $( "#blueflag-name" ).justtext() !== '' ){
                 console.log("blue flag already out ");
             };
@@ -281,6 +262,7 @@
             if ( $( "#redflag-name" ).justtext() !== null && $( "#redflag-name" ).justtext() !== ''){
                 console.log("red flag already out ");
             }
+            */
         }
         
         

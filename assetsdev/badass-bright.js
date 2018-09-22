@@ -15,14 +15,7 @@
         {
             console.log ("New settings applied: ", values);
             settings = values;
-            // window.flavor = settings.values1;
-            console.log(settings.values1);
-            paf = settings.values1;
-            // if (flavor == 'default') {
 
-            //    console.log("SETTTTTTINGS")
-
-            // }
             if (settings.customizeFb === true){
                 console.log("customizeFb !!");
                 const optionnalFbStyle = `
@@ -52,8 +45,6 @@
         // Default values for the settings
         let settings = {
             customizeFb: false,
-            // values1: "default",
-
         };
 
         let sp = new SettingsProvider(settings, onApply);
@@ -61,24 +52,9 @@
         let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
 
-        // section.addValuesField("values1", "Flavor",
-        // {
-        //    "default": "Default",
-        //    "nuklear": "Nuklear"
-        // });
-
-
-
         // we return our SettingsProvider instance
         return sp;
     }
-
-
-    //function getFlavor()
-    //{
-    //    flavor = settings.values1;
-    //    return flavor;
-    //}
 
     // ------------------------------------------------------------------------
 
@@ -106,10 +82,7 @@
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-
-
-
-
+    
     class Badass2018ThemeBright extends VanillaTheme
     {
         constructor() {
@@ -119,7 +92,7 @@
         }
 
         // This method called by StarMash when the game is loading
-        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures,paf)
+        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
             const toChange = [
                 "gui.png",
@@ -149,8 +122,6 @@
 
     }
 
-    //let map = game.graphics.layers.map; // land layers container
-    //map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
     // ------------------------------------------------------------------------
 
     // embed fork of Moz's Flag Borders
@@ -207,11 +178,6 @@
           </style>
         `;
 
-
-
-
-        //$('#redditPanel').css('opacity', '1');
-        // $('body').addClass('smoothload');
         $('head').append ( headstyle );
         $('body').append ( style );
 
@@ -251,11 +217,6 @@
     };
     // function onGamePrep () {
     SWAM.on ( 'gamePrep', function (){
-        // toggleRed ( false );
-        // toggleBlue ( false );
-        // SWAM.ZoomTo(bdosf);
-
-
         $("#badassnews").css({display: "none"});
         $('body').removeClass();
 
@@ -269,11 +230,7 @@
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);
-
         }
-
-
-
 
     });
     // function onGameWipe () {

@@ -5,7 +5,7 @@
 
 !function()
 {
-    var paf = '';
+    
     // Settings
 
     function createSettingsProvider()
@@ -17,7 +17,7 @@
             settings = values;
             // window.flavor = settings.values1;
             console.log(settings.values1);
-            paf = settings.values1;
+            
             // if (flavor == 'default') {
 
             //    console.log("SETTTTTTINGS")
@@ -119,7 +119,7 @@
         }
 
         // This method called by StarMash when the game is loading
-        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures,paf)
+        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
             const toChange = [
                 "gui.png",

@@ -5,7 +5,7 @@
 
 !function()
 {
-    var paf = '';
+
     // Settings
     
     function createSettingsProvider()
@@ -15,14 +15,7 @@
         {
             console.log ("New settings applied: ", values);
             settings = values;
-            // window.flavor = settings.values1;
-            console.log(settings.values1);
-            paf = settings.values1;
-            // if (flavor == 'default') {
 
-            //    console.log("SETTTTTTINGS")
-
-            // }
             if (settings.customizeFb === true){
                 console.log("customizeFb !!");
                 const optionnalFbStyle = `
@@ -61,25 +54,12 @@
         let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
 
-        // section.addValuesField("values1", "Flavor",
-        // {
-        //    "default": "Default",
-        //    "nuklear": "Nuklear"
-        // });
-        
         
         
         // we return our SettingsProvider instance
         return sp;
     }
-    
-    
-    //function getFlavor()
-    //{
-    //    flavor = settings.values1;
-    //    return flavor;
-    //}
-    
+       
     // ------------------------------------------------------------------------
     
     // Returns the filename part of an AirMash's image URL
@@ -105,10 +85,7 @@
 
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
-    // when this theme is instantiated.
-    
-    
-            
+    // when this theme is instantiated.           
     
     class Badass2018ThemeNukem extends VanillaTheme
     {
@@ -119,7 +96,7 @@
         }
         
         // This method called by StarMash when the game is loading
-        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures,paf)
+        injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures)
         {
             const toChange = [
                 "gui.png",
@@ -141,7 +118,7 @@
                 if ($.inArray(fileName, toChange) > -1)
                 {
                     files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + paf + "/" + getFileName(files[i]);
-                    //console.log("paf " + paf);
+
                 }
             }
         }
@@ -161,24 +138,13 @@
         initHTML ();
         initStyle ();
         initEvents ();
-        // window.bdosf = config.scalingFactor;
-        // console.log("bdosf = " + bdosf)
-        // window.flavor = settings.values1;
-        // console.log(flavor);
-    
-        //if (flavor == 'default') {
-
-        //    console.log("SETTTTTTINGS")
-
-        //}
-        
+       
     }
     
     
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
-        // SWAM.ZoomTo(2500);
-        // config.scalingFactor = 2500;
+
         const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">`
         const style = `
           <style>
@@ -268,18 +234,6 @@
         // check gametype before
         if (game.gameType == SWAM.GAME_TYPE.CTF) {
             $('body').addClass('team' + game.myTeam);
-            
-            // var blueflagcheck = $( "#blueflag-name" ).justtext(); 
-            // var redflagcheck = $( "#redflag-name" ).justtext();
-            //if ( blueflagcheck.lenght > 0){
-            // doesnt work for some reason (?) :
-            if ( $( "#blueflag-name" ).justtext() !== null && $( "#blueflag-name" ).justtext() !== '' ){
-                console.log("blue flag already out ");
-            };
-            // if ( redflagcheck.lenght > 0){
-            if ( $( "#redflag-name" ).justtext() !== null && $( "#redflag-name" ).justtext() !== ''){
-                console.log("red flag already out ");
-            }
         }
         
         
