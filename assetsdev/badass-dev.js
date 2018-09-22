@@ -320,7 +320,7 @@
     
     // We add some metadata to our theme class
     $.extend(Badass2018ThemeDev, {
-        themeName: "💀 Badass Planes Theme Dev 💀",
+        themeName: "🔥💀 Badass Planes Theme Dev 💀🔥",
         description: "Experimental",
         author: "xplay"
     });
