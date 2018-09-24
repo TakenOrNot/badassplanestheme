@@ -182,7 +182,7 @@
             }
             .message .playerbig, .message .player {color:#fff500;}
             .message .playerbig .level, .message .player .level {color:white;}
-            .team1 > .message .playerbig, .team2 > .message .player {color:#dc4f46;}
+            .team1 > .message .playerbig, .team1 > .message .player {color:#dc4f46;}
             .team2 > .message .playerbig, .team2 > .message .player {color:#4d7fd5;}
           </style>
         `;
