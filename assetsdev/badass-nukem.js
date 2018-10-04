@@ -255,6 +255,7 @@
         description: "Experimental",
         author: "xplay",
         version: "1.0.2",
+        settingsProvider: createSettingsProvider(),
         themes: [ Badass2018ThemeNukem ]
     });
 }();
