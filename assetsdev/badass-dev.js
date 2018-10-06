@@ -426,7 +426,7 @@
         _getCustomFiles () {
 
               return $.extend ( super._getCustomFiles (), {
-                'items.jpg': 'items_beach.jpg',   
+                'items.png': 'items_beach.png',   
                 //'map_forest.jpg': 'map_forest_grid.jpg',
                 'map_rock_mask.jpg': 'map_rock_mask_beach.jpg',
                 'map_sand_mask.jpg': 'map_sand_mask_beach.jpg',
