@@ -366,8 +366,8 @@
     
     // We add some metadata to our theme class
     $.extend ( Badass2018Theme, {
-        themeName: " 🔥💀 Badass Planes Theme Dev 💀🔥 ",
-        description: 'Badass Planes Theme DEV',
+        themeName: " 💀 Badass Planes Theme 💀 ",
+        description: 'Badass Planes Theme',
         author: 'xplay'
     });
     
