@@ -298,10 +298,12 @@
   }
     
     
+    // ------------------------------------------------------------------------
     
+    // We add some metadata to our theme class
     $.extend ( Badass2018ThemeDev, {
-        themeName: 'Badass Planes Theme',
-        description: 'A theme that replace every image with their actual hit circles.',
+        themeName: "🔥💀 Badass Planes Theme Dev 💀🔥",
+        description: 'Badass Planes Theme DEV',
         author: 'xplay'
     });
 
@@ -329,14 +331,7 @@
     author: 'xplay'
   });  
     
-    // ------------------------------------------------------------------------
     
-    // We add some metadata to our theme class
-    $.extend(Badass2018ThemeDev, {
-        themeName: "🔥💀 Badass Planes Theme Dev 💀🔥",
-        description: "Experimental",
-        author: "xplay"
-    });
 
     // ------------------------------------------------------------------------
 
