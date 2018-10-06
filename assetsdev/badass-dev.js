@@ -164,8 +164,11 @@
         'items.png': 'items.png',
         'map_forest.jpg': 'map_forest.jpg',
         //'map_rock.jpg': 'map_rock.jpg',
+        'map_rock_mask.jpg': 'map_rock_mask.jpg',  
         'map_sand.jpg': 'map_sand.jpg',
+        'map_sand_mask.jpg': 'map_sand_mask.jpg',  
         'map_sea.jpg': 'map_sea.jpg',
+        'map_sea_mask.jpg': 'map_sea_mask.jpg',
         'mountains.png': 'mountains.png',
         //'particles.png': 'particles.png',
         'shadows.png': 'shadows.png'
@@ -376,8 +379,8 @@
 
               return $.extend ( super._getCustomFiles (), {
                 'map_forest.jpg': 'map_forest_brightbg.jpg',
-                'map_rock_mask.jpg': 'map_rock_mask_brightbg.jpg',
-                'map_sand_mask.jpg': 'map_sand_mask_brightbg.jpg',
+                //'map_rock_mask.jpg': 'map_rock_mask_brightbg.jpg',
+                //'map_sand_mask.jpg': 'map_sand_mask_brightbg.jpg',
                 'map_sea.jpg': 'map_sea_brightbg.jpg',
                 'map_sand.jpg': 'map_sand_brightbg.jpg'
               });
@@ -416,7 +419,30 @@
         author: 'xplay'
     });  
     
-    
+    /* THEME BEACH */
+
+    class Badass2018ThemeBeach extends Badass2018ThemeDev {
+
+        _getCustomFiles () {
+
+              return $.extend ( super._getCustomFiles (), {
+                'items.jpg': 'items_beach.jpg',   
+                //'map_forest.jpg': 'map_forest_grid.jpg',
+                'map_rock_mask.jpg': 'map_rock_mask_beach.jpg',
+                'map_sand_mask.jpg': 'map_sand_mask_beach.jpg',
+                'map_sea.jpg': 'map_sea_beach.jpg',
+                'map_sand.jpg': 'map_sand_beach.jpg'
+              });
+
+        }
+
+    }
+
+    $.extend ( Badass2018ThemeBeach, {
+        themeName: ' 🌴💀 Badass Planes Theme Beach 💀🌴 ',
+        description: 'Badass Planes Theme Beach',
+        author: 'xplay'
+    }); 
 
     // ------------------------------------------------------------------------
 
