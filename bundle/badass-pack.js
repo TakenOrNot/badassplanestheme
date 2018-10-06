@@ -414,8 +414,8 @@
     }
 
     $.extend ( Badass2018ThemeNukem, {
-        themeName: 'Badass Nukem',
-        description: 'Badass Planes Theme Nukem',
+        themeName: ' ☢️💀 Badass Planes Theme Nuklear 💀☢️ ',
+        description: 'Badass Planes Theme Nuklear',
         author: 'xplay'
     });  
     
