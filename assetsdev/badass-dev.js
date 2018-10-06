@@ -163,7 +163,7 @@
         'gui.png': 'gui.png',
         'items.png': 'items.png',
         'map_forest.jpg': 'map_forest.jpg',
-        'map_rock.jpg': 'map_rock.jpg',
+        //'map_rock.jpg': 'map_rock.jpg',
         'map_sand.jpg': 'map_sand.jpg',
         'map_sea.jpg': 'map_sea.jpg',
         'mountains.png': 'mountains.png',
