@@ -90,7 +90,7 @@
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-    /*   
+       
     class Badass2018ThemeDev extends VanillaTheme
     {
         constructor() {
@@ -98,6 +98,10 @@
             SWAM.replaceCSS("https://takenornot.github.io/badassplanestheme/assetsdev/style.css");
             //my initialization code goes here, after calling super()
         }
+   
+    }
+    /*    
+        
         
         // This method called by StarMash when the game is loading
         
