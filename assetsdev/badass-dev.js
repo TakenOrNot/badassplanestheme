@@ -167,7 +167,7 @@
         'map_sand.jpg': 'map_sand.jpg',
         'map_sea.jpg': 'map_sea.jpg',
         'mountains.png': 'mountains.png',
-        'particles.png': 'particles.png',
+        //'particles.png': 'particles.png',
         'shadows.png': 'shadows.png'
       };
 
@@ -367,7 +367,25 @@
         description: 'Badass Planes Theme DEV',
         author: 'xplay'
     });
+    
+    /* THEME BRIGHT BACKGROUND */
 
+    class Badass2018ThemeBright extends Badass2018ThemeDev {
+
+        _getCustomFiles () {
+
+              return $.extend ( super._getCustomFiles (), {
+                'map_forest.jpg': 'map_forest_brightbg.jpg',
+                'map_rock_mask.jpg': 'map_rock_mask_brightbg.jpg',
+                'map_sand_mask.jpg': 'map_sand_mask_brightbg.jpg',
+                'map_sea.jpg': 'map_sea_brightbg.jpg',
+                'map_sand.jpg': 'map_sand_brightbg.jpg'
+              });
+
+        }
+
+    }
+    
     /* THEME NUKEM */
 
     class Badass2018ThemeNukem extends Badass2018ThemeDev {
@@ -404,6 +422,6 @@
         author: "xplay",
         version: "1.0.2",
         settingsProvider: createSettingsProvider(),
-        themes: [ Badass2018ThemeDev, Badass2018ThemeNukem ]
+        themes: [ Badass2018ThemeDev, Badass2018ThemeBright, Badass2018ThemeNukem ]
     });
 }();
