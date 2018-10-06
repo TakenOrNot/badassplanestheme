@@ -182,7 +182,7 @@
 
         if ( fileName in customFiles ) {
 
-          files[key] = `https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/${customFiles[fileName]}`; // Production
+          files[key] = `https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/dev/${customFiles[fileName]}`; // Production
 
         }
 
