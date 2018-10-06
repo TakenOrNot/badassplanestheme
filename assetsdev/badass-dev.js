@@ -90,7 +90,7 @@
     // Theme Function
     // This theme inherits from VanillaTheme, so we call VanillaTheme's constructor
     // when this theme is instantiated.
-       
+    /*   
     class Badass2018ThemeDev extends VanillaTheme
     {
         constructor() {
@@ -100,6 +100,7 @@
         }
         
         // This method called by StarMash when the game is loading
+        
         injectTextures(files, textureInfo, flagTextureInfo, spriteInfo, textures,paf)
         {
             const toChange = [
@@ -128,11 +129,68 @@
             }
         }
         
+        
+        
     }
-
+    */
     //let map = game.graphics.layers.map; // land layers container
     //map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
     // ------------------------------------------------------------------------
+    
+    
+    
+    _getFileName ( str ) {
+
+      str = str.substring ( str.lastIndexOf ( '/' ) + 1 );
+
+      if ( str.indexOf ( '?' ) > - 1 ) {
+        str = str.substr ( 0, str.indexOf ( '?' ) );
+      }
+
+      return str;
+
+    }
+
+    _getCustomFiles () {
+
+      return {
+        'aircraft.png': 'aircraft.png',
+        'gui.png': 'gui.png',
+        'items.png': 'items.png',
+        'map_forest.jpg': 'map_forest.jpg',
+        'map_rock.jpg': 'map_rock.jpg',
+        'map_sand.jpg': 'map_sand.jpg',
+        'map_sea.jpg': 'map_sea.jpg',
+        'mountains.png': 'mountains.png',
+        'particles.png': 'particles.png',
+        'shadows.png': 'shadows.png'
+      };
+
+    }
+
+    injectTextures ( files, textureInfo, flagTextureInfo, spriteInfo, textures ) {
+
+      const customFiles = this._getCustomFiles ();
+
+      for ( let key in files ) {
+
+        const fileName = this._getFileName ( files[key] );
+
+        if ( fileName in customFiles ) {
+
+          files[key] = `https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/${customFiles[fileName]}`; // Production
+
+        }
+
+      }
+
+    }
+
+  }
+    
+    
+    
+    
     
     // embed fork of Moz's Flag Borders 
     // https://github.com/fabiospampinato/airmash-swam-extensions/blob/master/extensions/flag_borders.js
