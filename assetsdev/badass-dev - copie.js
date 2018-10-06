@@ -298,37 +298,6 @@
   }
     
     
-    
-    $.extend ( Badass2018ThemeDev, {
-        themeName: 'Badass Planes Theme',
-        description: 'A theme that replace every image with their actual hit circles.',
-        author: 'xplay'
-    });
-
-  /* THEME NUKEM */
-
-  class Badass2018ThemeNukem extends Badass2018ThemeDev {
-
-    _getCustomFiles () {
-
-      return $.extend ( super._getCustomFiles (), {
-        //'map_forest.jpg': 'map_forest_grid.jpg',
-        'map_rock_mask.jpg': 'map_rock_mask_nukem.jpg',
-        'map_sand_mask.jpg': 'map_sand_mask_nukem.jpg',
-        'map_sea.jpg': 'map_sea_nukem.jpg',
-        'map_sand.jpg': 'map_sand_nukem.jpg'
-      });
-
-    }
-
-  }
-    
-   $.extend ( Badass2018ThemeNukem, {
-    themeName: 'Badass Nukem',
-    description: 'Badass Planes Theme Nukem',
-    author: 'xplay'
-  });  
-    
     // ------------------------------------------------------------------------
     
     // We add some metadata to our theme class
