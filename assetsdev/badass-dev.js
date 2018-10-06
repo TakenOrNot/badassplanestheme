@@ -363,7 +363,7 @@
     
     // We add some metadata to our theme class
     $.extend ( Badass2018ThemeDev, {
-        themeName: "🔥💀 Badass Planes Theme Dev 💀🔥",
+        themeName: " 🔥💀 Badass Planes Theme Dev 💀🔥 ",
         description: 'Badass Planes Theme DEV',
         author: 'xplay'
     });
@@ -385,6 +385,12 @@
         }
 
     }
+    
+    $.extend ( Badass2018ThemeBright, {
+        themeName: '☀️💀 Badass Planes Theme Bright bg 💀☀️',
+        description: 'Badass Planes Theme Bright Background',
+        author: 'xplay'
+    });  
     
     /* THEME NUKEM */
 
