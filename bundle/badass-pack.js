@@ -379,6 +379,7 @@
         _getCustomFiles () {
 
               return $.extend ( super._getCustomFiles (), {
+                'aircraft.png': 'aircraftab.png',  
                 'map_forest.jpg': 'map_forest_brightbg.jpg',
                 //'map_rock_mask.jpg': 'map_rock_mask_brightbg.jpg',
                 //'map_sand_mask.jpg': 'map_sand_mask_brightbg.jpg',
@@ -403,12 +404,12 @@
         _getCustomFiles () {
 
               return $.extend ( super._getCustomFiles (), {
-                  'aircraft.png': 'aircraftab.png',
-                //'map_forest.jpg': 'map_forest_brightbg.jpg',
+                
+                'map_forest.jpg': 'map_forest_brightbg.jpg',
                 //'map_rock_mask.jpg': 'map_rock_mask_brightbg.jpg',
                 //'map_sand_mask.jpg': 'map_sand_mask_brightbg.jpg',
-                //'map_sea.jpg': 'map_sea_brightbg.jpg',
-                //'map_sand.jpg': 'map_sand_brightbg.jpg'
+                'map_sea.jpg': 'map_sea_brightbg.jpg',
+                'map_sand.jpg': 'map_sand_brightbg.jpg'
               });
 
         }
