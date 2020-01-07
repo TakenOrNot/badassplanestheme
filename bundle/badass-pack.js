@@ -1,5 +1,6 @@
 // ------------------------------------------------------------------------
 //   Badass Planes Themes Bundle for StarMash
+//   https://takenornot.github.io/badassplanestheme/bundle/badass-pack.js
 // ------------------------------------------------------------------------
 "use strict";
 
@@ -265,7 +266,7 @@
                     // if element already exist, dont add it again
         }
         else {
-            $('body').append( "<div id='badassnews'><ul><li>Sep 2 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-bright.js' target='_blank'>BRIGHT version available !</a> </li><li>Ago 25 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-beach.js' target='_blank'>BEACH version available !</a> </li><li>Jul 15 2018 - <a href='https://takenornot.github.io/badassplanestheme/assetsdev/badass-nukem.js' target='_blank'>NUKLEAR version available !</a> </li><li>May 23 2018 - <a href='https://takenornot.github.io/badassplanestheme/assets/badass.js' target='_blank'>CLASSIC version available !</a> </li></ul></div>");
+            $('body').append( "<div id='badassnews'><ul><li>Sep 2 2018 - BRIGHT version available !</li><li>Ago 25 2018 - BEACH version available !</li><li>Jul 15 2018 - NUKLEAR version available !</li><li>May 23 2018 - CLASSIC version available ! </li></ul></div>");
         }
     }
     function initEvents () {
@@ -371,9 +372,9 @@
         author: 'xplay'
     });
     
-    /* THEME BRIGHT BACKGROUND */
+    /* THEME AB */
 
-    class Badass2018ThemeBright extends Badass2018Theme {
+    class Badass2018ThemeAB extends Badass2018Theme {
 
         _getCustomFiles () {
 
@@ -383,6 +384,31 @@
                 //'map_sand_mask.jpg': 'map_sand_mask_brightbg.jpg',
                 'map_sea.jpg': 'map_sea_brightbg.jpg',
                 'map_sand.jpg': 'map_sand_brightbg.jpg'
+              });
+
+        }
+
+    }
+    
+    $.extend ( Badass2018ThemeAB, {
+        themeName: '☀️AB theme test☀️',
+        description: ' AB theme test ',
+        author: 'xplay'
+    });  
+    
+    /* THEME BRIGHT BACKGROUND */
+
+    class Badass2018ThemeBright extends Badass2018Theme {
+
+        _getCustomFiles () {
+
+              return $.extend ( super._getCustomFiles (), {
+                  'aircraft.png': 'aircraftab.png',
+                //'map_forest.jpg': 'map_forest_brightbg.jpg',
+                //'map_rock_mask.jpg': 'map_rock_mask_brightbg.jpg',
+                //'map_sand_mask.jpg': 'map_sand_mask_brightbg.jpg',
+                //'map_sea.jpg': 'map_sea_brightbg.jpg',
+                //'map_sand.jpg': 'map_sand_brightbg.jpg'
               });
 
         }
@@ -454,6 +480,6 @@
         author: "xplay",
         version: "1.0.0",
         settingsProvider: createSettingsProvider(),
-        themes: [ Badass2018Theme, Badass2018ThemeBright, Badass2018ThemeNukem, Badass2018ThemeBeach]
+        themes: [ Badass2018Theme, Badass2018ThemeAB, Badass2018ThemeBright, Badass2018ThemeNukem, Badass2018ThemeBeach]
     });
 }();
