@@ -225,7 +225,7 @@
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
 
-        const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">https://fonts.googleapis.com/css?family=B612:400,700" rel="stylesheet"> `
+        const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=B612:400,700" rel="stylesheet"> `
         const style = `
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
