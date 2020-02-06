@@ -379,6 +379,7 @@
         _getCustomFiles () {
 
               return $.extend ( super._getCustomFiles (), {
+                'items.png': 'items_ab.png', 
                 'aircraft.png': 'aircraftab.png',  
                 'map_forest.jpg': 'map_forest_ab.jpg',
                 'map_rock.jpg': 'map_rock_ab.jpg',
