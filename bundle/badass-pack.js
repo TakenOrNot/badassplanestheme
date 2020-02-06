@@ -225,11 +225,12 @@
     //if (game.gameType == SWAM.GAME_TYPE.CTF) {
     function initStyle () {
 
-        const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">`
+        const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">https://fonts.googleapis.com/css?family=B612:400,700" rel="stylesheet"> `
         const style = `
           <style>
             body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
             #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
+            
             #badassnews {
                 position: absolute;
                 top: 10px;

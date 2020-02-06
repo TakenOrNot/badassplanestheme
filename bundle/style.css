@@ -21,26 +21,6 @@ table {
     display: none
 }
 
-@font-face {
-    font-family: 'MontserratWeb';
-    font-style: normal;
-    font-weight: 400;
-    src: url("https://airma.sh/assets/montserrat-semibold.woff2") format('woff2'),url("https://airma.sh/assets/montserrat-semibold.woff") format('woff')
-}
-
-@font-face {
-    font-family: 'MontserratWeb';
-    font-style: normal;
-    font-weight: 700;
-    src: url("https://airma.sh/assets/montserrat-bold.woff2") format('woff2'),url("https://airma.sh/assets/montserrat-bold.woff") format('woff')
-}
-
-@font-face {
-    font-family: 'MontserratWeb';
-    font-style: normal;
-    font-weight: 800;
-    src: url("https://airma.sh/assets/montserrat-extrabold.woff2") format('woff2'),url("https://airma.sh/assets/montserrat-extrabold.woff") format('woff')
-}
 
 html {
     background-color: #000;
@@ -49,7 +29,7 @@ html {
 
 body {
     overflow: hidden;
-    font-family: 'MontserratWeb',Helvetica,sans-serif;
+    font-family: 'B612',Helvetica,sans-serif;
     font-size: 13px;
     font-weight: normal;
     color: #505050;
@@ -151,7 +131,7 @@ input:focus {
 #logon #playername {
     display: block;
     font-size: 18px;
-    font-family: 'MontserratWeb',Helvetica,sans-serif;
+    font-family: 'B612',Helvetica,sans-serif;
     margin: 100px auto 0 auto;
     width: 330px;
     padding-left: 14px;
@@ -1007,7 +987,7 @@ input:focus {
 
 #chatinput {
     font-size: 13px;
-    font-family: 'MontserratWeb',Helvetica,sans-serif;
+    font-family: 'B612',Helvetica,sans-serif;
     width: calc(25% - 12px);
     min-width: 318px;
     max-width: 788px;
