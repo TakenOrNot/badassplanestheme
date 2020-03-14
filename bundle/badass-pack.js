@@ -18,7 +18,7 @@
             settings = values;
 
             if (settings.customizeFb === true){
-                console.log("customizeFb !!");
+                //console.log("customizeFb !!");
                 const optionnalFbStyle = `
                     <style id='optionnalFbStyle'>
                         #flag-border-red-right:not([style*="display: none"]){-webkit-animation: neonredright .5s ease-in-out alternate; animation-iteration-count: 11; background : radial-gradient(ellipse closest-side, rgba(255,17,119, .5) 32%, rgba(255,17,119,0) 67%, rgba(255,17,119,0) 100%); height : 4%; top: -2%; }
@@ -41,12 +41,27 @@
                 $('#optionnalFbStyle').remove(); 
                 
             }
+            
+            if (settings.UImsgAnim === false){
+                const optionnalUImsgStyle = `
+                    <style id='optionnalUImsgStyle'>
+                       .message.popmsg, .message.hidemsg {animation : none;}
+
+                    </style>
+                `
+                if ( $( "#optionnalUImsgStyle" ).length ) {
+                    // if element already exist, dont add it again
+                }
+                else {
+                    $('body').append ( optionnalUImsgStyle );
+                }
+            }
         }
 
         // Default values for the settings
         let settings = {
             customizeFb: false,
-            // values1: "default",
+            UImsgAnim: true,
             
         };
 
@@ -54,7 +69,7 @@
     
         let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
-
+        section.addBoolean("UImsgAnim", "Animate UI messages");
         // section.addValuesField("values1", "Flavor",
         // {
         //    "default": "Default",
