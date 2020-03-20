@@ -42,6 +42,10 @@
                 
             }
             
+            if (settings.UImsgShow === false){
+                UI.showMessage = () => {};
+            }
+            
             if (settings.UImsgAnim === false){
                 const optionnalUImsgStyle = `
                     <style id='optionnalUImsgStyle'>
@@ -56,11 +60,14 @@
                     $('body').append ( optionnalUImsgStyle );
                 }
             }
+            
+            
         }
 
         // Default values for the settings
         let settings = {
             customizeFb: false,
+            UImsgShow: true,
             UImsgAnim: true,
             
         };
@@ -69,6 +76,7 @@
     
         let section = sp.addSection("Look & feel");
         section.addBoolean("customizeFb", "Customize Moz's Flag Borders apearance");
+        section.addBoolean("UImsgShow", "Show UI messages");
         section.addBoolean("UImsgAnim", "Animate UI messages");
         // section.addValuesField("values1", "Flavor",
         // {
