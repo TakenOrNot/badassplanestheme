@@ -152,7 +152,7 @@
 
                 if ($.inArray(fileName, toChange) > -1)
                 {
-                    files[i] = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/" + paf + "/" + getFileName(files[i]);
+                    files[i] = "//takenornot.github.io/badassplanestheme/assetsdev/" + paf + "/" + getFileName(files[i]);
                     //console.log("paf " + paf);
                 }
             }
@@ -163,7 +163,7 @@
     }
     */
     //let map = game.graphics.layers.map; // land layers container
-    //map.mask = "//raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/map.json";
+    //map.mask = "//takenornot.github.io/badassplanestheme/assetsdev/map.json";
     // ------------------------------------------------------------------------
     
     
@@ -210,7 +210,7 @@
 
         if ( fileName in customFiles ) {
 
-          files[key] = `https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/bundle/assets/${customFiles[fileName]}`; // Production
+          files[key] = `https://takenornot.github.io/badassplanestheme/bundle/assets/${customFiles[fileName]}`; // Production
 
         }
 
@@ -251,8 +251,8 @@
         const headstyle = `<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=B612:400,700" rel="stylesheet"> `
         const style = `
           <style>
-            body{background: black url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/loading.png') 50% 15% no-repeat;}
-            #logon .logo {background:url('https://raw.githubusercontent.com/TakenOrNot/badassplanestheme/master/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
+            body{background: black url('https://takenornot.github.io/badassplanestheme/assetsdev/loading.png') 50% 15% no-repeat;}
+            #logon .logo {background:url('https://takenornot.github.io/badassplanestheme/assetsdev/logosmall.png') 0 -5px no-repeat; background-size: 100% 100%;}
             
             #badassnews {
                 position: absolute;
